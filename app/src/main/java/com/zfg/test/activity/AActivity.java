@@ -19,7 +19,7 @@ public class AActivity extends AppCompatActivity {
     }
 
     public void send(View view) {
-        EventBus.getDefault().post(new MessageEvent("hello..."));
+        EventBus.getDefault().post(new MessageEvent("第二次：：hello..."));
     }
 
     public void start(View view) {
