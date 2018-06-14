@@ -25,6 +25,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    signingConfigs {
+        config {
+            storeFile file("demokey.jks")//keystore的路径
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+    }
 }
 
 dependencies {
