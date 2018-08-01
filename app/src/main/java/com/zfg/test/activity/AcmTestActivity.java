@@ -21,7 +21,7 @@ public class AcmTestActivity extends AppCompatActivity {
         insertSort();
         selectSort();
         bubbSort();
-        minMultiple();
+//        minMultiple();
     }
 
     private void minMultiple() {

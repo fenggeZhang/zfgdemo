@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.zfg.test">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions"/>
 
     <application
         android:name=".MyApplication"
@@ -17,11 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".activity.BaseWebViewActivity">
         </activity>
@@ -50,6 +48,25 @@
         <activity android:name=".activity.FragmentsActivity">
         </activity>
         <activity android:name=".activity.ArouterTestActivity">
+        </activity>
+        <activity android:name=".kotlintest.MainKotlin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".kotlintest.activity.BaseWebKotlin"/>
+        <activity android:name=".kotlintest.activity.FragmentsKotlin"/>
+        <activity android:name=".activity.MultClassicActivity">
+        </activity>
+        <activity android:name=".activity.TitleBarActivity">
+        </activity>
+        <activity android:name=".activity.WeakSefActivity">
+        </activity>
+        <activity android:name=".activity.DesignBarActivity">
+        </activity>
+        <activity android:name=".activity.AdjustCodeActivity">
         </activity>
     </application>
 

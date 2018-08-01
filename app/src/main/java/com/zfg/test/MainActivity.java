@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.activity.AActivity;
@@ -35,6 +36,7 @@ import com.zfg.test.adapter.DividerGridItemDecoration;
 import com.zfg.test.adapter.MyAdapter;
 import com.zfg.test.common.Contants;
 import com.zfg.test.entitiy.TestBean;
+import com.zfg.test.kotlintest.MainKotlin;
 import com.zfg.test.utils.SizeUtils;
 
 import java.util.ArrayList;
@@ -52,6 +54,7 @@ public class MainActivity extends Activity {
     private ClipData mClipData;
     HashMap<String, String> map = new HashMap<>();
     LinearLayout my_layout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +73,9 @@ public class MainActivity extends Activity {
                 Log.e("zfg", "点击：" + position);
 //                LogUtil.e("高度：" + mRecyclerView.getMeasuredHeight());
                 switch (position) {
+                    case 14:
+                        startActivity(new Intent(MainActivity.this, MainKotlin.class));
+                        break;
                     case 13:
                         ARouter.getInstance().build(Contants.START_AROUTER_ACTIVITY)
                                 .withString("name","aa")
@@ -146,6 +152,7 @@ public class MainActivity extends Activity {
         mTestBeans.add(new TestBean("视觉图"));
         mTestBeans.add(new TestBean("测量高度"));
         mTestBeans.add(new TestBean("跳转"));
+        mTestBeans.add(new TestBean("kotlin"));
     }
 
     private void initView() {
