@@ -20,7 +20,7 @@ class MainKotlin : AppCompatActivity() {
 
     var list: ArrayList<String> = arrayListOf("网页", "排序", "分隔符", "搜索",
             "注解", "注解2", "event数据", "event数据1", "动画", "视觉图", "测量高度"
-            , "三级分类", "头部Visible", "三级分类", "三级分类", "三级分类", "三级分类"
+            , "三级分类", "头部Visible", "图形验证码", "三级分类", "三级分类", "三级分类"
             , "三级分类", "三级分类", "三级分类", "三级分类", "三级分类", "三级分类"
             , "三级分类", "三级分类", "三级分类", "三级分类", "三级分类", "三级分类"
             , "三级分类", "三级分类", "三级分类", "三级分类", "三级分类", "三级分类"
@@ -69,5 +69,6 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(FragmentsKotlin::class.java)
         activityList.add(MultClassicActivity::class.java)
         activityList.add(TitleBarActivity::class.java)
+        activityList.add(AdjustCodeActivity::class.java)
     }
 }
