@@ -8,12 +8,19 @@ import java.io.Serializable;
  */
 public class BaseEntity<T> implements Serializable {
 
-
     private static final long serialVersionUID = -4731323566809811989L;
 
-    private int code;
-    private String msg;
-    private T data;
+    public int code;
+    public String msg;
+    public T data;
+
+    public BaseEntity() {
+    }
+
+    public BaseEntity(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
 
     public int getCode() {
         return code;
@@ -37,5 +44,14 @@ public class BaseEntity<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseEntity{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

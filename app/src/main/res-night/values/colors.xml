@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--后缀加载-->
+    <color name="colorPrimary_night">#d4ce20</color>
+    <color name="colorPrimaryDark_night">#efd407</color>
+    <color name="bg_main_night">#fff240</color>
+
+</resources>

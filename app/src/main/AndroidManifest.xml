@@ -68,6 +68,14 @@
         </activity>
         <activity android:name=".activity.AdjustCodeActivity">
         </activity>
+        <activity android:name=".activity.DrawTextActivity">
+        </activity>
+        <activity android:name=".activity.RequestActivity">
+        </activity>
+        <activity android:name=".activity.base.BaseActivity"/>
+        <activity android:name=".activity.SkinTestActivity">
+        </activity>
+        <activity android:name=".activity.FragmentActivity"/>
     </application>
 
 </manifest>

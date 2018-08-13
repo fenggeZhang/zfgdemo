@@ -6,9 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.RetrofitTestActivity">
+
     <com.flaviofaria.kenburnsview.KenBurnsView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/timg" />
+        android:src="@drawable/timg"/>
 </LinearLayout>

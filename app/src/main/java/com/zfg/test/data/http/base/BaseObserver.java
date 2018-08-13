@@ -2,6 +2,7 @@ package com.zfg.test.data.http.base;
 
 import android.content.Context;
 
+import com.zfg.test.data.http.ErrorHelper;
 import com.zfg.test.data.http.bean.BaseEntity;
 
 import io.reactivex.Observer;
@@ -36,7 +37,7 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
 
     @Override
     public void onError(Throwable e) {
-
+        ErrorHelper.onError(mContext,e);
     }
 
     @Override
