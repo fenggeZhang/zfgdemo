@@ -135,10 +135,7 @@ public class DrawTextView extends View {
     }
 
     public Bitmap getImage() {
-
         Bitmap bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.RGB_565);
-        Log.e("绘制", getWidth() + "::" + getHeight());
-
         Canvas canvas = new Canvas(bitmap);
         /**
          * 绘制背景

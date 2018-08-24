@@ -18,7 +18,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme1">
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="480"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="800"/>
+
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".activity.BaseWebViewActivity">
@@ -68,7 +75,9 @@
         </activity>
         <activity android:name=".activity.AdjustCodeActivity">
         </activity>
-        <activity android:name=".activity.DrawTextActivity">
+        <activity
+            android:name=".activity.DrawTextActivity"
+            android:screenOrientation="landscape">
         </activity>
         <activity android:name=".activity.RequestActivity">
         </activity>
@@ -76,6 +85,14 @@
         <activity android:name=".activity.SkinTestActivity">
         </activity>
         <activity android:name=".activity.FragmentActivity"/>
+        <activity android:name=".activity.GuideActivity">
+        </activity>
+        <activity android:name=".activity.MutlViewActivity">
+        </activity>
+        <activity android:name=".activity.MainTestActivity">
+        </activity>
+        <activity android:name=".activity.FitXYActivity">
+        </activity>
     </application>
 
 </manifest>

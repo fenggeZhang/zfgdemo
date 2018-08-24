@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zfg.test.activity.MutlViewActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.classic.common.MultipleStatusView
+            android:id="@+id/multiple_status_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:emptyView="@layout/custom_empty_view"
+            app:errorView="@layout/custom_error_view"
+            app:loadingView="@layout/custom_loading_view"
+            app:noNetworkView="@layout/custom_no_network_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/empty_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="empty"
+                    android:padding="@dimen/dp_10"
+                    android:text="暂无内容"/>
+
+                <TextView
+                    android:id="@+id/loading_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="loading"
+                    android:padding="@dimen/dp_10"
+                    android:text="加载中"/>
+
+                <TextView
+                    android:id="@+id/error_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="error"
+                    android:padding="@dimen/dp_10"
+                    android:text="加载错误"/>
+
+                <TextView
+                    android:id="@+id/no_network_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="net_error"
+                    android:padding="@dimen/dp_10"
+                    android:text="网络错误"/>
+            </LinearLayout>
+
+
+        </com.classic.common.MultipleStatusView>
+        <!--layout_behavior这个里面必须有值-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_action_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:layout_behavior="com.zfg.test.weigt.ScaleDownShowBehavior"
+            app:srcCompat="@drawable/ic_arrow_upward_white_24dp"
+            tools:ignore="VectorDrawableCompat"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

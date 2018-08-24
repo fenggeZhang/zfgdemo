@@ -16,7 +16,6 @@ import skin.support.SkinCompatManager;
 
 public class TestFragment extends PreferenceFragment {
     SwitchPreference testPrefer;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +24,7 @@ public class TestFragment extends PreferenceFragment {
         testPrefer.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                应用内换肤
                 boolean boolValue = (boolean) newValue;
                 if (boolValue) {
                     SkinCompatManager.getInstance().loadSkin("night", null, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
