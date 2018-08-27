@@ -26,6 +26,7 @@ import com.zfg.test.weigt.helper.BottomNavigationViewHelper;
 import java.lang.annotation.Retention;
 
 public class MainTestActivity extends AppCompatActivity {
+
     private int FRAGMENT_ONE = 1;
     private int FRAGMENT_TWO = 2;
     private int FRAGMENT_THREE = 3;
