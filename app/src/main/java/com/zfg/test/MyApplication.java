@@ -8,8 +8,6 @@ import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
 import com.tencent.bugly.crashreport.CrashReport;
 
-import me.jessyan.autosize.AutoAdaptStrategy;
-import me.jessyan.autosize.AutoSizeConfig;
 import skin.support.SkinCompatManager;
 
 /**

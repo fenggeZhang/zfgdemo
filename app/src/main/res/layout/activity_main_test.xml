@@ -7,8 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.zfg.test.activity.MainTestActivity"
-    tools:openDrawer="start">
+    tools:context="com.zfg.test.activity.MainTestActivity">
+
+    <!--tools:openDrawer="start"-->
+    <!--上一句 侧滑默认打开-->
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/my_CoordinatorLayout"
@@ -43,6 +45,7 @@
             app:layout_behavior="com.zfg.test.weigt.ScaleDownShowBehavior"
             app:srcCompat="@drawable/ic_arrow_upward_white_24dp"
             tools:ignore="VectorDrawableCompat"/>
+
     </android.support.design.widget.CoordinatorLayout>
     <!--侧滑栏-->
     <android.support.design.widget.NavigationView

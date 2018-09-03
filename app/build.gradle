@@ -47,6 +47,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -86,7 +87,7 @@ dependencies {
     implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'//引导层
 
     implementation 'com.classic.common:multiple-status-view:1.5.1'
-    implementation 'me.jessyan:autosize:0.7.0'//适配
+//    implementation 'me.jessyan:autosize:0.7.0'//适配
 }
 repositories {
     mavenCentral()
