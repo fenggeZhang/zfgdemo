@@ -104,6 +104,8 @@
             android:name=".activity.IntentBActivity"
             android:screenOrientation="landscape">
         </activity>
+        <activity android:name=".activity.FloatingActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -45,8 +45,10 @@
 
         <!-- Actionbar color -->
         <item name="colorPrimary">@color/material_deep_teal_500</item>
+        <!--material_deep_teal_500-->
         <!--Status bar color-->
         <item name="colorPrimaryDark">@color/material_deep_teal_500</item>
+        <!--material_deep_teal_500-->
         <!--Window color-->
         <item name="android:windowBackground">@color/dim_foreground_material_dark</item>
     </style>
