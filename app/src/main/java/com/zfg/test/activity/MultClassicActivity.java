@@ -9,9 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.zfg.test.R;
 import com.zfg.test.adapter.MyClassicAdapter;
-import com.zfg.test.entitiy.LevelOne;
-import com.zfg.test.entitiy.LevelThree;
-import com.zfg.test.entitiy.LevelTwo;
+import com.zfg.test.entity.LevelOne;
 
 import java.util.ArrayList;
 
@@ -20,6 +18,7 @@ public class MultClassicActivity extends AppCompatActivity {
     private RecyclerView rvMain;
     private ArrayList<MultiItemEntity> multiList = new ArrayList<>();
     private MyClassicAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +29,7 @@ public class MultClassicActivity extends AppCompatActivity {
         initData();
 
     }
+
     private void initView() {
         rvMain = (RecyclerView) findViewById(R.id.rv_main);
     }
@@ -59,14 +59,18 @@ public class MultClassicActivity extends AppCompatActivity {
 
         for (int i = 0; i < levelOne; i++) {
 
-            LevelOne lv1 = new LevelOne("一级列表" + i,0);
+            LevelOne lv1 = new LevelOne("一级列表" + i, 0);
 
             for (int j = 0; j < levelTwo; j++) {
 
-                LevelOne lv2 = new LevelOne("二级列表",1);
-                LevelOne lv3=new LevelOne("三级列表" + j,2);
-                lv2.addSubItem(lv3);
-                lv1.addSubItem(lv2);
+                LevelOne lv20 = new LevelOne("二级列表", 1);
+                LevelOne lv21 = new LevelOne("二级列表", 1);
+                LevelOne lv22 = new LevelOne("二级列表", 1);
+                LevelOne lv3 = new LevelOne("三级列表" + j, 2);
+                lv20.addSubItem(lv3);
+                lv1.addSubItem(lv20);
+                lv1.addSubItem(lv21);
+                lv1.addSubItem(lv22);
             }
             res.add(lv1);
         }

@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.R;
-import com.zfg.test.entitiy.MessageEvent;
+import com.zfg.test.entity.MessageEvent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

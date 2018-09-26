@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_titlebar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/common_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:onClick="back"
+        android:padding="15dp"
+        android:src="@mipmap/icon_back"/>
+
+    <TextView
+        android:id="@+id/common_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="@string/common_title"
+        android:textColor="@color/gray_33"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/common_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="@string/right"
+        android:textColor="@color/gray_66"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/calender_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/image_desc"
+        android:padding="15dp"
+        android:src="@mipmap/calender_icon"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/search_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/image_desc"
+        android:padding="15dp"
+        android:src="@mipmap/nav_icon_search_black"
+        android:visibility="gone"/>
+</RelativeLayout>

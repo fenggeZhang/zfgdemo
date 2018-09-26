@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zfg.test.R;
-import com.zfg.test.entitiy.TestBean;
+import com.zfg.test.entity.TestBean;
 
 import java.util.List;
 

@@ -18,7 +18,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.activity.AActivity;
@@ -35,9 +34,8 @@ import com.zfg.test.activity.SearchActivity;
 import com.zfg.test.adapter.DividerGridItemDecoration;
 import com.zfg.test.adapter.MyAdapter;
 import com.zfg.test.common.Contants;
-import com.zfg.test.entitiy.TestBean;
+import com.zfg.test.entity.TestBean;
 import com.zfg.test.kotlintest.MainKotlin;
-import com.zfg.test.utils.SizeUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

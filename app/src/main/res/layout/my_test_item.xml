@@ -8,8 +8,7 @@
     <TextView
         android:id="@+id/title_tv"
         android:layout_margin="8dp"
-        android:background="@color/gray"
-        android:layout_width="80dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center"
         android:textColor="@color/black"

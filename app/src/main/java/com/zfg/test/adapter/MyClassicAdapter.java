@@ -1,18 +1,13 @@
 package com.zfg.test.adapter;
 
 import android.content.Context;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.TextureView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.zfg.test.R;
-import com.zfg.test.entitiy.LevelOne;
-import com.zfg.test.entitiy.LevelThree;
-import com.zfg.test.entitiy.LevelTwo;
+import com.zfg.test.entity.LevelOne;
 
 import java.util.List;
 

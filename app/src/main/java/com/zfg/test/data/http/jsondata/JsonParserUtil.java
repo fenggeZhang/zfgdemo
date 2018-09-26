@@ -3,8 +3,6 @@ package com.zfg.test.data.http.jsondata;
 import android.text.TextUtils;
 
 import com.zfg.test.data.http.bean.BaseEntity;
-import com.zfg.test.entitiy.ApiData;
-import com.zfg.test.utils.GSONUtil;
 
 /**
  * Created by zfg on 2018/8/8

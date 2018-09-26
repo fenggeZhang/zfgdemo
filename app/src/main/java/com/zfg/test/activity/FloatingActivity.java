@@ -1,7 +1,11 @@
 package com.zfg.test.activity;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.NestedScrollingParent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +16,12 @@ import com.zfg.test.R;
 
 /**
  * 悬浮按钮
+ * 根布局采用 CoordinatorLayout 代frameLayout 解决悬浮按钮被覆盖的问题
+ * 使用coordian 可以自动向上移动
  */
 public class FloatingActivity extends AppCompatActivity {
+    private CoordinatorLayout mCoordinatorLayout;
+
     private FloatingActionButton mFloatingActionButton;
 
     @Override
@@ -21,10 +29,19 @@ public class FloatingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floating);
         initView();
+        initTest();
+        addListener();
+    }
+
+    private void addListener() {
 
     }
 
+    private void initTest() {
+    }
+
     private void initView() {
+        mCoordinatorLayout = findViewById(R.id.content_layout);
         mFloatingActionButton = findViewById(R.id.float_btn);
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

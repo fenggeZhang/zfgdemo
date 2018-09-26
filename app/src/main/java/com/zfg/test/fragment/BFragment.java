@@ -14,6 +14,7 @@ import com.zfg.test.R;
  * Created by zfg on 2018/8/24
  */
 public class BFragment extends Fragment {
+
     View mRootView;
 
     @Nullable

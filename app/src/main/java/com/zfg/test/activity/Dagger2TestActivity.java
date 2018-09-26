@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.zfg.test.R;
-import com.zfg.test.entitiy.Cloth;
-import com.zfg.test.entitiy.DaggerMainComponent;
-import com.zfg.test.entitiy.MainComponent;
-import com.zfg.test.entitiy.MainModule;
+import com.zfg.test.entity.Cloth;
+import com.zfg.test.entity.DaggerMainComponent;
+import com.zfg.test.entity.MainComponent;
+import com.zfg.test.entity.MainModule;
 
 import javax.inject.Inject;
 

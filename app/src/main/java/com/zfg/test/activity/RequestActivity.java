@@ -16,8 +16,32 @@ public class RequestActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_request);
         request();
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_request;
+    }
+
+    @Override
+    protected void setupView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void addListener() {
+
+    }
+
+    @Override
+    protected int getTitleStringId() {
+        return R.string.test_request_title;
     }
 
     private void request() {

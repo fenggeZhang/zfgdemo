@@ -50,7 +50,7 @@
         <item name="colorPrimaryDark">@color/material_deep_teal_500</item>
         <!--material_deep_teal_500-->
         <!--Window color-->
-        <item name="android:windowBackground">@color/dim_foreground_material_dark</item>
+        <item name="android:windowBackground">@color/button_material_light</item>
     </style>
     <style name="AppTheme1" parent="Base.AppTheme">
 
