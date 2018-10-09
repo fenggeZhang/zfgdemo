@@ -1,8 +1,8 @@
 package com.zfg.test.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.facebook.stetho.common.LogUtil;
@@ -19,6 +19,7 @@ public class BActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
         EventBus.getDefault().register(this);
+        LogUtil.e("页面B：：onCreate");
     }
 
     @Subscribe

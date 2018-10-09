@@ -1,10 +1,9 @@
 package com.zfg.test.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.zfg.test.R;
-import com.zfg.test.utils.DisplayUtil;
 
 /**
  * 屏幕适配

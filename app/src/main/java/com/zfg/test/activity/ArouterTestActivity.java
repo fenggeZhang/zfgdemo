@@ -1,17 +1,13 @@
 package com.zfg.test.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Switch;
+import android.support.v7.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.R;
-
-import java.util.Collection;
-import java.util.List;
 
 import static com.zfg.test.common.Contants.START_AROUTER_ACTIVITY;
 

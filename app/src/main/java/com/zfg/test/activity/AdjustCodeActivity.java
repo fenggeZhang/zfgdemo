@@ -1,13 +1,12 @@
 package com.zfg.test.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.zfg.test.R;
 import com.zfg.test.utils.CodeUtils;
-import com.zfg.test.weigt.VerifyCode;
 
 /**
  * 验证码

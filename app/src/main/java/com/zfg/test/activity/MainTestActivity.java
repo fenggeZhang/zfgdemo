@@ -1,15 +1,14 @@
 package com.zfg.test.activity;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.Menu;
@@ -22,8 +21,6 @@ import com.zfg.test.fragment.AFragment;
 import com.zfg.test.fragment.BFragment;
 import com.zfg.test.utils.ToastUtils;
 import com.zfg.test.weigt.helper.BottomNavigationViewHelper;
-
-import java.lang.annotation.Retention;
 
 public class MainTestActivity extends AppCompatActivity {
 

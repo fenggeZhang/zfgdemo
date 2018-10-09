@@ -1,12 +1,10 @@
 package com.zfg.test.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 
 import com.zfg.test.R;
-
-import static android.widget.LinearLayout.SHOW_DIVIDER_MIDDLE;
 
 public class LinearLayoutActivity extends AppCompatActivity {
     private LinearLayout myLiner;

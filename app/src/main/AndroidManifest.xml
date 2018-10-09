@@ -110,6 +110,10 @@
         </activity>
         <activity android:name=".activity.DragGoupActivity">
         </activity>
+        <activity android:name=".activity.ExpandableTextViewActivity">
+        </activity>
+        <activity android:name=".activity.RadarScanActivity">
+        </activity>
     </application>
 
 </manifest>

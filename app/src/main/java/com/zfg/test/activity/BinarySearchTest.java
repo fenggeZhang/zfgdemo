@@ -1,10 +1,6 @@
 package com.zfg.test.activity;
 
 
-import com.facebook.stetho.common.LogUtil;
-
-import java.util.Arrays;
-
 /**
  * Created by zfg on 2018/7/17
  * 二分查找

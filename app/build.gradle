@@ -88,6 +88,7 @@ dependencies {
 
     implementation 'com.classic.common:multiple-status-view:1.5.1'
 //    implementation 'me.jessyan:autosize:0.7.0'//适配
+    implementation 'com.ms-square:expandableTextView:0.1.4'//可展开收缩得Text
 }
 repositories {
     mavenCentral()

@@ -32,9 +32,9 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
     <style name="Base.AppTheme" parent="Theme.AppCompat">
         <!--去掉原来的ActionBar-->
@@ -50,11 +50,34 @@
         <item name="colorPrimaryDark">@color/material_deep_teal_500</item>
         <!--material_deep_teal_500-->
         <!--Window color-->
-        <item name="android:windowBackground">@color/button_material_light</item>
+        <item name="android:windowBackground">@color/gray_dd</item>
     </style>
+
     <style name="AppTheme1" parent="Base.AppTheme">
 
         <!-- 这个属性之所以注释掉是因为它只能在5.0之后使用，所以一定要定义它的话需要在/res/valuse-v21/sytles.xml中进行定义 -->
         <!-- <item name="android:navigationBarColor">@color/accent_material_light</item> -->
     </style>
+
+    <declare-styleable name="RadarView">
+        <!--圆圈和交叉线的颜色-->
+        <attr name="circleColor" format="color"/>
+        <!--圆圈的数量-->
+        <attr name="circleNum" format="integer"/>
+        <!--扫描的颜色 RadarView会对这个颜色做渐变透明处理-->
+        <attr name="sweepColor" format="color"/>
+        <!--水滴的颜色-->
+        <attr name="raindropColor" format="color"/>
+        <!--水滴的数量 这里表示的是水滴最多能同时出现的数量。因为水滴是随机产生的，数量是不确定的-->
+        <attr name="raindropNum" format="integer"/>
+        <!--是否显示交叉线-->
+        <attr name="showCross" format="boolean"/>
+        <!--是否显示水滴-->
+        <attr name="showRaindrop" format="boolean"/>
+        <!--扫描的转速，表示几秒转一圈-->
+        <attr name="speed" format="float"/>
+        <!--水滴显示和消失的速度-->
+        <attr name="flicker" format="float"/>
+    </declare-styleable>
+
 </resources>

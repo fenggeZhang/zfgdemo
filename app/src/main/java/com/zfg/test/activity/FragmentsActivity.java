@@ -1,21 +1,18 @@
 package com.zfg.test.activity;
 
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.R;
 import com.zfg.test.adapter.FragmentAdapter;
 import com.zfg.test.fragment.AFragment;
-import com.zfg.test.utils.SizeUtils;
 import com.zfg.test.weigt.NoScrollViewPager;
-
-import android.support.design.widget.TabLayout;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
