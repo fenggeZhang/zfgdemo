@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 收集日志 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission
         android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions"/>
@@ -18,7 +20,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme1">
+        android:theme="@style/AppTheme">
 
         <!--
         <meta-data
@@ -113,6 +115,10 @@
         <activity android:name=".activity.ExpandableTextViewActivity">
         </activity>
         <activity android:name=".activity.RadarScanActivity">
+        </activity>
+        <activity android:name=".activity.TestViewActivity">
+        </activity>
+        <activity android:name=".activity.ExpandListActivity">
         </activity>
     </application>
 

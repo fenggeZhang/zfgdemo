@@ -8,6 +8,7 @@ import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
 import com.tencent.bugly.crashreport.CrashReport;
 
+import cn.ljuns.logcollector.LogCollector;
 import skin.support.SkinCompatManager;
 
 /**
@@ -31,6 +32,14 @@ public class MyApplication extends Application {
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
         initSkin();
         initFitXY();
+        initLog();
+    }
+
+    /**
+     * 初始化收集日志
+     */
+    private void initLog() {
+        LogCollector.getInstance(this).start();
     }
 
     private void initFitXY() {
