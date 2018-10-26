@@ -1,6 +1,15 @@
-apply plugin: 'com.android.application'
+
+//apply plugin: 'com.didi.virtualapk.host'
+ext.mainApp = true  //设置为true，表示此module为主app module，一直以application方式编译
+apply from: rootProject.file('cc-settings-demo.gradle')
 apply plugin: 'kotlin-android'
-apply plugin: 'com.didi.virtualapk.host'
+
+/*
+ext.mainApp = true
+project.apply plugin: 'cc-register' //所有需要单独编译运行的组件module及主app module需要添加这一行
+project.dependencies.add('api', "com.billy.android:cc:2.1.1") //CC框架核心包，使用最新版
+*/
+
 android {
     compileSdkVersion 27
 
@@ -16,7 +25,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
     }
@@ -48,7 +57,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -76,8 +85,8 @@ dependencies {
     //KenBurnsView 视差图片控件
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
 //arouter路由
-    implementation 'com.alibaba:arouter-api:1.3.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    implementation 'com.alibaba:arouter-api:1.4.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:palette-v7:27.1.1'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
@@ -90,6 +99,11 @@ dependencies {
 //    implementation 'me.jessyan:autosize:0.7.0'//适配
     implementation 'com.ms-square:expandableTextView:0.1.4'//可展开收缩得Text
     implementation 'com.ljuns:logcollector:1.2.0'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'//加载超长图
+//    addComponent 'ccdemo' //会默认添加依赖：project(':demo_component_a')
+    addComponent 'ccdemo', project(':ccdemo') //module方式
+    addComponent 'ccdemo2', project(':ccdemo2') //module方式
+//    implementation project(path: ':ccdemo', configuration: 'default')
 }
 repositories {
     mavenCentral()

@@ -14,7 +14,6 @@ import com.zfg.test.utils.CodeUtils;
 public class AdjustCodeActivity extends AppCompatActivity {
 
     private ImageView mVerifyCode;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

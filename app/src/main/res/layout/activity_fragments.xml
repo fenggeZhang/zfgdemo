@@ -9,7 +9,6 @@
     android:id="@+id/root_layout"
     tools:context=".activity.FragmentsActivity">
     <Button
-        android:onClick="getHeight"
         android:text="获取高度"
         android:id="@+id/my_btn"
         android:layout_width="wrap_content"

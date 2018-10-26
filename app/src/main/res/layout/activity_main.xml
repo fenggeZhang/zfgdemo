@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:title="MMB记账"
+            app:title="Gezi学飞"
             />
 
     </android.support.design.widget.AppBarLayout>

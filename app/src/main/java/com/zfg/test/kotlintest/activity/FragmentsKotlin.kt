@@ -29,10 +29,6 @@ class FragmentsKotlin : AppCompatActivity() {
         initData()
     }
 
-    public fun getHeight(view: View) {
-
-    }
-
     private fun initData() {
         titlelist= ArrayList()
         titlelist.add("页面A")
@@ -48,7 +44,7 @@ class FragmentsKotlin : AppCompatActivity() {
                 fragments,titlelist)
         mViewPager.adapter=mFragmentAdapter
         mTabLayout.setupWithViewPager(mViewPager)
-        mTabLayout.setTabsFromPagerAdapter(mFragmentAdapter)
+//        mTabLayout.setTabsFromPagerAdapter(mFragmentAdapter)
     }
 
     private fun initView() {

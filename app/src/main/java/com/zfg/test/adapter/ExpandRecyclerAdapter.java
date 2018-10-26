@@ -2,14 +2,18 @@ package com.zfg.test.adapter;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.zfg.test.R;
 import com.zfg.test.entity.ItemType1;
 import com.zfg.test.entity.ItemType2;
 import com.zfg.test.entity.ItemType3;
+import com.zfg.test.utils.LogUtil;
+import com.zfg.test.utils.ToastUtils;
 
 import java.util.List;
 
@@ -70,8 +74,17 @@ public class ExpandRecyclerAdapter extends BaseMultiItemQuickAdapter<MultiItemEn
             case TYPE_LEVEL_2: {
                 final ItemType3 lv0 = (ItemType3) item;
                 helper.setText(R.id.title, lv0.getContent());
+                helper.addOnClickListener(R.id.title);
+
+               /* helper.getView(R.id.title).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ToastUtils.show(mContext,"点击了"+lv0.getContent());
+                    }
+                });*/
             }
             break;
         }
     }
+
 }

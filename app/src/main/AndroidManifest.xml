@@ -86,7 +86,7 @@
         </activity>
         <activity android:name=".activity.RequestActivity">
         </activity>
-        <activity android:name=".activity.base.BaseActivity"/>
+        <!--<activity android:name=".activity.base.BaseActivity"/>-->
         <activity android:name=".activity.SkinTestActivity">
         </activity>
         <activity android:name=".activity.FragmentActivity"/>
@@ -119,6 +119,10 @@
         <activity android:name=".activity.TestViewActivity">
         </activity>
         <activity android:name=".activity.ExpandListActivity">
+        </activity>
+        <activity android:name=".activity.LongPhotoActivity">
+        </activity>
+        <activity android:name=".activity.CcTestActivity">
         </activity>
     </application>
 

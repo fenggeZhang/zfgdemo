@@ -27,7 +27,7 @@ class MainKotlin : AppCompatActivity() {
             , "三级分类", "头部Visible", "图形验证码", "签名", "请求", "换肤"
             , "新控件", "引导层", "多种状态", "侧滑首页", "适配", "横屏-竖屏"
             , "悬浮按钮", "分组+多分类", "拖拽分组", "伸缩text", "雷达扫描动画"
-            , "自定义view", "expand分组"
+            , "自定义view", "expand分组","加载大图","组件化测试"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -90,5 +90,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(RadarScanActivity::class.java)
         activityList.add(TestViewActivity::class.java)
         activityList.add(ExpandListActivity::class.java)
+        activityList.add(LongPhotoActivity::class.java)
+        activityList.add(CcTestActivity::class.java)
     }
 }
