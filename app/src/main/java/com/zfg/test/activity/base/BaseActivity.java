@@ -1,5 +1,6 @@
 package com.zfg.test.activity.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import com.zfg.test.data.http.ErrorHelper;
 import com.zfg.test.data.http.HttpCallback;
 import com.zfg.test.data.http.HttpTaskRunnable;
 import com.zfg.test.data.http.bean.BaseEntity;
+import com.zfg.test.utils.ToastUtils;
 import com.zfg.test.weigt.ILoadingDialog;
 
 import java.util.ArrayList;
@@ -29,11 +31,13 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
 
     private RelativeLayout mCommonTitleLayout;
     private TextView mCommonTitleTv;
+    public Context mContext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        mContext = this;
         initView();
     }
 
@@ -53,7 +57,6 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
     protected abstract void initData();
 
     protected abstract void addListener();
-
 
 
     protected abstract int getTitleStringId();
@@ -103,6 +106,10 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
     @Override
     public void onFinish() {
 
+    }
+
+    public void showToast(String message) {
+        ToastUtils.show(this, message);
     }
 
     public void back(View view) {

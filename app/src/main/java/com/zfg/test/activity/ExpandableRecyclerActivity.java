@@ -1,8 +1,8 @@
 package com.zfg.test.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -10,12 +10,11 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
+import com.zfg.test.activity.star.ShineButtonActivity;
 import com.zfg.test.adapter.ExpandRecyclerAdapter;
-import com.zfg.test.adapter.MyClassicAdapter;
 import com.zfg.test.entity.ItemType1;
 import com.zfg.test.entity.ItemType2;
 import com.zfg.test.entity.ItemType3;
-import com.zfg.test.entity.LevelOne;
 import com.zfg.test.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -68,7 +67,15 @@ public class ExpandableRecyclerActivity extends BaseActivity {
         mExpandRecyclerAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                ToastUtils.show(ExpandableRecyclerActivity.this, "我是child" + position);
+                ItemType3 itemType3 = (ItemType3) adapter.getData().get(position);
+                if (itemType3.getActivity() != null) {
+                    Intent intent = new Intent();
+                    intent.setClass(ExpandableRecyclerActivity.this,itemType3.getActivity());
+                    startActivity(intent);
+                }
+
+//                ToastUtils.show(ExpandableRecyclerActivity.this, "我是child" + position);
+
             }
         });
         mExpandRecyclerAdapter.expandAll();
@@ -90,6 +97,22 @@ public class ExpandableRecyclerActivity extends BaseActivity {
         int levelTwo = 3;
 
         List<MultiItemEntity> res = new ArrayList<>();
+
+        ItemType1 lv01 = new ItemType1("按钮样式");
+        ItemType2 lv02 = new ItemType2("点赞");
+
+        ItemType3 lv03 = new ItemType3("发光赞");
+        lv03.setActivity(ShineButtonActivity.class);
+        ItemType3 lv030 = new ItemType3("点赞+1");
+
+        ItemType3 lv031 = new ItemType3("推特点赞效果");
+
+        lv02.addSubItem(lv03);
+        lv02.addSubItem(lv030);
+        lv02.addSubItem(lv031);
+        lv01.addSubItem(lv02);
+
+        res.add(lv01);
 
         for (int i = 0; i < levelOne; i++) {
 

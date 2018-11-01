@@ -8,6 +8,7 @@ import com.billy.cc.core.component.CC;
 import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
 import com.tencent.bugly.crashreport.CrashReport;
+import com.zhouyou.http.EasyHttp;
 
 import cn.ljuns.logcollector.LogCollector;
 import skin.support.SkinCompatManager;
@@ -35,6 +36,11 @@ public class MyApplication extends Application {
         initFitXY();
         initLog();
         initCc();
+        initRxEasy();
+    }
+
+    private void initRxEasy() {
+        EasyHttp.init(this);//默认初始化
     }
 
     private void initCc() {

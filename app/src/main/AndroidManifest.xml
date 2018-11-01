@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- 收集日志 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission
         android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions"/>
@@ -86,7 +87,7 @@
         </activity>
         <activity android:name=".activity.RequestActivity">
         </activity>
-        <!--<activity android:name=".activity.base.BaseActivity"/>-->
+        <!-- <activity android:name=".activity.base.BaseActivity"/> -->
         <activity android:name=".activity.SkinTestActivity">
         </activity>
         <activity android:name=".activity.FragmentActivity"/>
@@ -123,6 +124,16 @@
         <activity android:name=".activity.LongPhotoActivity">
         </activity>
         <activity android:name=".activity.CcTestActivity">
+        </activity>
+        <activity android:name=".activity.ArcLayoutActivity">
+        </activity>
+        <activity android:name=".activity.star.ShineButtonActivity">
+        </activity>
+        <activity android:name=".activity.RxEasyHttpActivity">
+        </activity>
+        <activity android:name=".activity.PermissionsActivity">
+        </activity>
+        <activity android:name=".activity.GestureActivity">
         </activity>
     </application>
 

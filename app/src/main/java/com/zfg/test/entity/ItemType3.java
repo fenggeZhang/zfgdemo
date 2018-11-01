@@ -8,6 +8,7 @@ import com.zfg.test.adapter.ExpandRecyclerAdapter;
  */
 public class ItemType3 implements MultiItemEntity {
     private String content;
+    private Class<?> mActivity;
 
     public ItemType3(String content) {
         this.content = content;
@@ -24,5 +25,13 @@ public class ItemType3 implements MultiItemEntity {
     @Override
     public int getItemType() {
         return ExpandRecyclerAdapter.TYPE_LEVEL_2;
+    }
+
+    public Class<?> getActivity() {
+        return mActivity;
+    }
+
+    public void setActivity(Class<?> activity) {
+        mActivity = activity;
     }
 }

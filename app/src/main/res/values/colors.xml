@@ -23,4 +23,8 @@
     <color name="item_type_1">#faf6e9</color>
     <color name="item_type_2">#ece8d9</color>
     <color name="item_type_3">#fffdf6</color>
+
+    <color name="color_a">#87EA00</color>
+    <color name="color_b">#FFAB00</color>
+    <color name="color_c">#00AD70</color>
 </resources>

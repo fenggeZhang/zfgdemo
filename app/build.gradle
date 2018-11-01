@@ -1,4 +1,3 @@
-
 //apply plugin: 'com.didi.virtualapk.host'
 ext.mainApp = true  //设置为true，表示此module为主app module，一直以application方式编译
 apply from: rootProject.file('cc-settings-demo.gradle')
@@ -50,6 +49,10 @@ android {
         main {
             res.srcDirs = ['src/main/res', 'src/main/res-night']
         }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 
@@ -104,6 +107,15 @@ dependencies {
     addComponent 'ccdemo', project(':ccdemo') //module方式
     addComponent 'ccdemo2', project(':ccdemo2') //module方式
 //    implementation project(path: ':ccdemo', configuration: 'default')
+    implementation 'com.github.florent37:arclayout:1.0.3'
+    implementation 'com.sackcentury:shinebutton:0.2.0'
+
+//    implementation 'com.qmuiteam:qmui:1.1.3'
+    implementation 'com.wx.goodview:goodview:1.0.0'//点赞效果
+    implementation 'com.zhouyou:rxeasyhttp:2.1.2'//网络请求
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'//权限动态申请
+    implementation 'com.github.nisrulz:sensey:1.8.0'//手势
+
 }
 repositories {
     mavenCentral()

@@ -10,12 +10,14 @@ import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.zfg.test.R
 import com.zfg.test.activity.*
+import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
 
 /**
  * Created by zfg on 2018/6/15
+ * demo主页
  */
 
 class MainKotlin : AppCompatActivity() {
@@ -27,7 +29,8 @@ class MainKotlin : AppCompatActivity() {
             , "三级分类", "头部Visible", "图形验证码", "签名", "请求", "换肤"
             , "新控件", "引导层", "多种状态", "侧滑首页", "适配", "横屏-竖屏"
             , "悬浮按钮", "分组+多分类", "拖拽分组", "伸缩text", "雷达扫描动画"
-            , "自定义view", "expand分组","加载大图","组件化测试"
+            , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
+            , "网络请求", "权限", "手势"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -92,5 +95,10 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(ExpandListActivity::class.java)
         activityList.add(LongPhotoActivity::class.java)
         activityList.add(CcTestActivity::class.java)
+        activityList.add(ArcLayoutActivity::class.java)
+        activityList.add(ShineButtonActivity::class.java)
+        activityList.add(RxEasyHttpActivity::class.java)
+        activityList.add(PermissionsActivity::class.java)
+        activityList.add(GestureActivity::class.java)
     }
 }
