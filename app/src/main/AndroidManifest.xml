@@ -135,6 +135,18 @@
         </activity>
         <activity android:name=".activity.GestureActivity">
         </activity>
+        <activity android:name=".activity.VideoActivity">
+        </activity>
+        <activity android:name=".activity.VideoListActivity">
+        </activity>
+        <activity android:name=".activity.chart.ChartsActivity">
+        </activity>
+        <activity android:name=".activity.chart.BarChartsActivity">
+        </activity>
+        <activity android:name=".activity.chart.LineChartActivity">
+        </activity>
+        <activity android:name=".activity.chart.MultLineChartActivity">
+        </activity>
     </application>
 
 </manifest>

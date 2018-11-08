@@ -27,4 +27,6 @@ Android的Logo是由Ascender公司设计的，诞生于2010年，其设计灵感
     <string name="test_rxeasyhttp_title">Rxeasyhttp网络请求测试</string>
     <string name="test_permissions_title">权限申请</string>
     <string name="test_device_gesture">手势动作</string>
+    <string name="test_video_title">视频播放器</string>
+    <string name="test_video_list_title">视频列表</string>
 </resources>

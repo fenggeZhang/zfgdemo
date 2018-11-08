@@ -1,13 +1,13 @@
 package com.zfg.test;
 
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.billy.cc.core.component.CC;
 import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
-import com.tencent.bugly.crashreport.CrashReport;
 import com.zhouyou.http.EasyHttp;
 
 import cn.ljuns.logcollector.LogCollector;
@@ -16,7 +16,7 @@ import skin.support.SkinCompatManager;
 /**
  * Created by zfg on 2018/5/7
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -95,5 +95,7 @@ public class MyApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         PluginManager.getInstance(base).init();
+        MultiDex.install(this);
     }
+
 }

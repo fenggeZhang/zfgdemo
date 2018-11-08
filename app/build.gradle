@@ -17,7 +17,7 @@ android {
     }
     defaultConfig {
         applicationId "com.zfg.test"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -27,6 +27,7 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -115,6 +116,10 @@ dependencies {
     implementation 'com.zhouyou:rxeasyhttp:2.1.2'//网络请求
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'//权限动态申请
     implementation 'com.github.nisrulz:sensey:1.8.0'//手势
+    implementation 'com.ycjiang:VideoPlayModule:2.3.0'//完整版 视频播放
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'//图表
 
 }
 repositories {
