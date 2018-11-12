@@ -147,6 +147,8 @@
         </activity>
         <activity android:name=".activity.chart.MultLineChartActivity">
         </activity>
+        <activity android:name=".activity.chart.PieChartActivity">
+        </activity>
     </application>
 
 </manifest>

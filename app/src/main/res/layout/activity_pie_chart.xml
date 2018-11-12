@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
-    tools:context="com.zfg.test.activity.chart.MultLineChartActivity">
+    tools:context="com.zfg.test.activity.chart.PieChartActivity">
 
     <include layout="@layout/common_titlebar_layout"/>
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
         android:layout_width="match_parent"
         android:layout_height="500dp"/>
 

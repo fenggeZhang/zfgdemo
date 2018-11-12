@@ -8,7 +8,9 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
@@ -18,7 +20,7 @@ import java.util.ArrayList;
 /**
  * 多个折线
  */
-public class MultLineChartActivity extends BaseActivity {
+public class MultLineChartActivity extends BaseActivity implements OnChartValueSelectedListener {
 
     private LineChart mLineChart;
 
@@ -40,6 +42,7 @@ public class MultLineChartActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        mLineChart.setOnChartValueSelectedListener(this);
         initChart();
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
 
@@ -70,10 +73,11 @@ public class MultLineChartActivity extends BaseActivity {
         LineData data = new LineData(dataSets);
         mLineChart.setData(data);
         mLineChart.invalidate();
-
-
     }
 
+    /**
+     * 设置图表样式
+     */
     private void initChart() {
         //图表的描述文字
         Description description = new Description();
@@ -100,7 +104,7 @@ public class MultLineChartActivity extends BaseActivity {
             // disable dual axis (only use LEFT axis)
             mLineChart.getAxisRight().setEnabled(false);
             // horizontal grid lines
-            yAxis.enableGridDashedLine(10f, 10f, 0f);//设置纵坐标的间距
+            yAxis.enableGridDashedLine(10f, 10f, 0f);//设置纵坐标的间距 启用虚线网格
 
             // axis range
 //            yAxis.setAxisMaximum(200f);
@@ -124,5 +128,15 @@ public class MultLineChartActivity extends BaseActivity {
     @Override
     protected int getTitleStringId() {
         return 0;
+    }
+
+    @Override
+    public void onValueSelected(Entry e, Highlight h) {
+        showToast("选择了" + e.getX() + "," + e.getY());
+    }
+
+    @Override
+    public void onNothingSelected() {
+
     }
 }
