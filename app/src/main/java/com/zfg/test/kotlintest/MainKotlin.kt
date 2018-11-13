@@ -32,7 +32,7 @@ class MainKotlin : AppCompatActivity() {
             , "悬浮按钮", "分组+多分类", "拖拽分组", "伸缩text", "雷达扫描动画"
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
-            , "折线图1","多折线图","饼状图"
+            , "折线图1", "多折线图", "饼状图", "滚动文字"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -109,5 +109,6 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(LineChartActivity::class.java)
         activityList.add(MultLineChartActivity::class.java)
         activityList.add(PieChartActivity::class.java)
+        activityList.add(TextSwitcherActivity::class.java)
     }
 }

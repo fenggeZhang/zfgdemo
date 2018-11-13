@@ -121,6 +121,7 @@ dependencies {
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'//图表
 
+
 }
 repositories {
     mavenCentral()

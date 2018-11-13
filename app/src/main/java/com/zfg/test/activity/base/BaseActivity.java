@@ -115,4 +115,14 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
     public void back(View view) {
         finish();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        for (int i = 0, size = mDisposable.size(); i < size; i++) {
+            if (mDisposable.get(i) != null) {
+                mDisposable.get(i).dispose();
+            }
+        }
+    }
 }
