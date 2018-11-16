@@ -13,6 +13,7 @@ import android.widget.ViewSwitcher;
 
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
+import com.zfg.test.utils.Logger;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;

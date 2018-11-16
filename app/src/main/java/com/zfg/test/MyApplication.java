@@ -8,6 +8,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.billy.cc.core.component.CC;
 import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
+import com.zfg.test.utils.Logger;
 import com.zhouyou.http.EasyHttp;
 
 import cn.ljuns.logcollector.LogCollector;

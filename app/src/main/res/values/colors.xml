@@ -27,4 +27,6 @@
     <color name="color_a">#87EA00</color>
     <color name="color_b">#FFAB00</color>
     <color name="color_c">#00AD70</color>
+
+    <color name="hard_color">#48495f</color>
 </resources>

@@ -151,6 +151,8 @@
         </activity>
         <activity android:name=".activity.TextSwitcherActivity">
         </activity>
+        <activity android:name=".activity.loaddata.LoadMoreDataActivity">
+        </activity>
     </application>
 
 </manifest>
