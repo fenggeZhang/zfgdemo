@@ -11,7 +11,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.zfg.test.R
 import com.zfg.test.activity.*
 import com.zfg.test.activity.chart.*
+import com.zfg.test.activity.data.GreenDaoTestActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
+import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
@@ -33,7 +35,8 @@ class MainKotlin : AppCompatActivity() {
             , "悬浮按钮", "分组+多分类", "拖拽分组", "伸缩text", "雷达扫描动画"
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
-            , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新"
+            , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
+            , "多条形图","弹出框"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -112,5 +115,9 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(PieChartActivity::class.java)
         activityList.add(TextSwitcherActivity::class.java)
         activityList.add(LoadMoreDataActivity::class.java)
+        activityList.add(GreenDaoTestActivity::class.java)
+        activityList.add(RxjavaTestActivity::class.java)
+        activityList.add(MultBarChartsActivity::class.java)
+        activityList.add(MyPopuWindowActivity::class.java)
     }
 }

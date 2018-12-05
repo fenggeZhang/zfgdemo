@@ -9,6 +9,7 @@ import com.zfg.test.data.http.httpstores.WebStores;
 
 
 import io.reactivex.Observable;
+import okhttp3.RequestBody;
 import retrofit2.Retrofit;
 
 /**
@@ -38,6 +39,23 @@ public class WebService extends BaseRetrofitManager {
         return instance;
     }
 
+    public static WebService getInstance(Context context, String baseUrl) {
+        if (instance == null) {
+            synchronized (WebService.class) {
+                if (instance == null) {
+                    instance = new WebService(context, baseUrl);
+                }
+            }
+        }
+        return instance;
+    }
+
+    private WebService(Context context, String url) {
+        super(context);
+        baseUrl = url;
+    }
+
+
     public Retrofit createRetrofit() {
         retrofit = getRetrofit(baseUrl);
         return retrofit;
@@ -52,8 +70,18 @@ public class WebService extends BaseRetrofitManager {
     /**
      * 获取首页
      */
-    public void getMain(int taskId,HttpCallback callback) {
+    public void getMain(int taskId, HttpCallback callback) {
         Observable<String> observable = createApiStores().getMainInfo();
+        parseResult(taskId, observable, callback);
+    }
+
+    /**
+     * 获取标准名称
+     * @param taskId
+     * @param callback
+     */
+    public void getName(int taskId, RequestBody requestBody,HttpCallback callback) {
+        Observable<String> observable = createApiStores().getName(requestBody);
         parseResult(taskId, observable, callback);
     }
 

@@ -6,6 +6,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.zfg.test.adapter.NullStringToEmptyAdapterFactory;
 
+import java.lang.reflect.Type;
+import java.util.List;
+
 /**
  * Created by zfg on 2018/8/8
  */
@@ -24,5 +27,15 @@ public class GSONUtil {
             e.printStackTrace();
         }
         return t;
+    }
+
+    public static <T> String toJson(T t) {
+        Gson gson = new Gson();
+        return gson.toJson(t);
+    }
+
+    public static <T> String toJson(List<T> t, Type type) {
+        Gson gson = new Gson();
+        return gson.toJson(t, type);
     }
 }

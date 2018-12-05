@@ -15,6 +15,8 @@ buildscript {
         classpath 'com.billy.android:cc-register:1.0.6'//CC框架 https://github.com/luckybilly/CC
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
     }
 }
 

@@ -38,6 +38,7 @@ public class MyApplication extends MultiDexApplication {
         initLog();
         initCc();
         initRxEasy();
+
     }
 
     private void initRxEasy() {

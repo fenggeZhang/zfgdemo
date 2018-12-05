@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zfg.test.activity.MyPopuWindowActivity">
+
+    <include layout="@layout/common_titlebar_layout"/>
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/filter_area_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部区域"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/filter_sales_detail_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销售额明细"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/filter_sales_money_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="金额高到低"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/filter_setting_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="筛选"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+</LinearLayout>

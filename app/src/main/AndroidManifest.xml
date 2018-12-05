@@ -153,6 +153,16 @@
         </activity>
         <activity android:name=".activity.loaddata.LoadMoreDataActivity">
         </activity>
+        <activity android:name=".activity.data.GreenDaoTestActivity">
+        </activity>
+        <activity android:name=".activity.rxjava.RxjavaTestActivity">
+        </activity>
+        <activity android:name=".activity.chart.MultBarChartsActivity">
+        </activity>
+        <activity android:name=".activity.chart.MulitBarChartsActivity">
+        </activity>
+        <activity android:name=".activity.MyPopuWindowActivity">
+        </activity>
     </application>
 
 </manifest>
