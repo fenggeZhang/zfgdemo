@@ -163,6 +163,8 @@
         </activity>
         <activity android:name=".activity.MyPopuWindowActivity">
         </activity>
+        <activity android:name=".activity.SelectTimeActivity">
+        </activity>
     </application>
 
 </manifest>

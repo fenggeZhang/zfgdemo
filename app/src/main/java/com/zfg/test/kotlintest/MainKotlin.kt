@@ -36,7 +36,7 @@ class MainKotlin : AppCompatActivity() {
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
-            , "多条形图","弹出框"
+            , "多条形图", "弹出框", "时间选择器"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -119,5 +119,6 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(RxjavaTestActivity::class.java)
         activityList.add(MultBarChartsActivity::class.java)
         activityList.add(MyPopuWindowActivity::class.java)
+        activityList.add(SelectTimeActivity::class.java)
     }
 }
