@@ -20,11 +20,6 @@ public class AdjustCodeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adjust_code);
         mVerifyCode = findViewById(R.id.verify_codeview);
         mVerifyCode.setImageBitmap(CodeUtils.getInstance().createBitmap());
-        mVerifyCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mVerifyCode.setImageBitmap(CodeUtils.getInstance().createBitmap());
-            }
-        });
+        mVerifyCode.setOnClickListener(v -> mVerifyCode.setImageBitmap(CodeUtils.getInstance().createBitmap()));
     }
 }

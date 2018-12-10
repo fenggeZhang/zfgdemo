@@ -58,12 +58,7 @@ public class ExpandableRecyclerActivity extends BaseActivity {
         });
         mRecyclerView.setAdapter(mExpandRecyclerAdapter);
         mRecyclerView.setLayoutManager(manager);
-        mExpandRecyclerAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                ToastUtils.show(ExpandableRecyclerActivity.this, "我是item" + position);
-            }
-        });
+        mExpandRecyclerAdapter.setOnItemClickListener((adapter, view, position) -> ToastUtils.show(ExpandableRecyclerActivity.this, "我是item" + position));
         mExpandRecyclerAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
