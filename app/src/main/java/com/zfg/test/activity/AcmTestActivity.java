@@ -1,10 +1,9 @@
 package com.zfg.test.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.R;
 
 import java.util.Scanner;

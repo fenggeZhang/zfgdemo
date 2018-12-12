@@ -19,7 +19,7 @@ public class MyPopuWindow {
     private View mBelowView;
     private Context mContext;
     PopupWindow mPopupWindow;
-    private View mEmptyView;
+//    private View mEmptyView;
 
     public MyPopuWindow(Context context, View view, View belowView) {
         this.mContext = context;
@@ -30,18 +30,18 @@ public class MyPopuWindow {
 
     private void initPopupWindow() {
         mPopupWindow = new PopupWindow(mView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, true);
-        mEmptyView = mView.findViewById(R.id.emptyView);
+//        mEmptyView = mView.findViewById(R.id.emptyView);
         mPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mPopupWindow.setOutsideTouchable(true);
         mPopupWindow.setFocusable(true);
 //        mPopupWindow.setSoftInputMode(PopupWindow.INPUT_METHOD_NEEDED);
         mPopupWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        mEmptyView.setOnClickListener(new View.OnClickListener() {
+        /*mEmptyView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mPopupWindow.dismiss();
             }
-        });
+        });*/
     }
 
     public void show() {

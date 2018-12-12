@@ -1,14 +1,20 @@
 package com.zfg.test.activity;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
+import com.zfg.test.utils.BitmapUtil;
 import com.zfg.test.weigt.MyPopuWindow;
+
+import java.io.IOException;
 
 public class MyPopuWindowActivity extends BaseActivity implements View.OnClickListener {
 
@@ -33,7 +39,20 @@ public class MyPopuWindowActivity extends BaseActivity implements View.OnClickLi
     @Override
     protected void initData() {
         View view = getLayoutInflater().inflate(R.layout.popu_filter_setting, null);
-        myPopuWindow = new MyPopuWindow(this,view, mLinearLayout);
+        TextView textView = view.findViewById(R.id.confirmTextView);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                // 核心代码start
+                Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+                Canvas c = new Canvas(bitmap);
+                view.layout(0, 0, view.getLayoutParams().width, view.getLayoutParams().height);
+                view.draw(c);
+                BitmapUtil.saveImageToGallery(mContext, bitmap);
+
+            }
+        });
+        myPopuWindow = new MyPopuWindow(this, view, mLinearLayout);
     }
 
     @Override
