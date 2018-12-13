@@ -7,6 +7,16 @@ import java.util.Stack;
  * Created by zfg on 2018/12/10
  */
 public class TestC {
+
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     public static void main(String args[]) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
@@ -21,8 +31,39 @@ public class TestC {
 //        String str = longestCommonPrefix(strings);
 //        System.out.println("结果：" + str);
 
-        boolean b = isValid("{}[{}]");
-        System.out.println("结果：" + b);
+//        boolean b = isValid("{}[{}]");
+//        System.out.println("结果：" + b);
+
+//        int a = strStr("aaaaa", "bba");
+//        System.out.print("位置：" + a);
+        ListNode listNode = new ListNode(1);
+        listNode.val = 1;
+        listNode.next = new ListNode(2);
+        listNode.next.next = new ListNode(4);
+        mergeTwoLists(listNode,listNode);
+    }
+
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode listNode = l1;
+        while (l1.next != null) {
+            System.out.print("链表：" + l1.val);
+        }
+        return listNode;
+    }
+
+    /**
+     * 字符串出现的索引
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public static int strStr(String haystack, String needle) {
+        if (haystack.contains(needle)) {
+            return haystack.indexOf(needle);
+        } else {
+            return -1;
+        }
     }
 
     /**
@@ -41,6 +82,7 @@ public class TestC {
             if (s.charAt(i) == ' ') {
                 continue;
             } else if (stack.empty() || stack.peek() != map.get(s.charAt(i))) {
+//                stack.peek()  这个方法是返回栈顶的元素，但并不会删除元素
 //                入栈
                 stack.push(s.charAt(i));
             } else {

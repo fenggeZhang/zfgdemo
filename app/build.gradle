@@ -125,7 +125,7 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2' // add library
 
     implementation 'com.contrarywind:Android-PickerView:4.1.6'//时间选择器
-
+    implementation 'com.google.zxing:core:3.3.0'
 }
 repositories {
     mavenCentral()

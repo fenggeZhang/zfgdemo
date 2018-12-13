@@ -167,6 +167,8 @@
         </activity>
         <activity android:name=".activity.ScreenshotViewActivity">
         </activity>
+        <activity android:name=".activity.QrCodeActivity">
+        </activity>
     </application>
 
 </manifest>
