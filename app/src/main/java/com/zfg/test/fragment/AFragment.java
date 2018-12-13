@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.facebook.stetho.common.LogUtil;
 import com.zfg.test.R;
 import com.zfg.test.adapter.DividerGridItemDecoration;
@@ -69,5 +70,6 @@ public class AFragment extends Fragment{
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(getActivity()));
         mMyAdapter = new MyAdapter(R.layout.my_test_item, mTestBeans);
         mRecyclerView.setAdapter(mMyAdapter);
+
     }
 }
