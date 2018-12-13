@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -64,7 +65,7 @@ public class AFragment extends Fragment{
     private void initView() {
         mRecyclerView = mRootView.findViewById(R.id.a_recycler);
         a_scrollview=mRootView.findViewById(R.id.a_scrollview);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),4));
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(getActivity()));
         mMyAdapter = new MyAdapter(R.layout.my_test_item, mTestBeans);
         mRecyclerView.setAdapter(mMyAdapter);
