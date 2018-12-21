@@ -17,6 +17,7 @@ package com.zfg.test.utils;
 
 import android.util.Log;
 
+import com.zfg.test.BuildConfig;
 import com.zfg.test.data.http.config.HttpConfig;
 
 
@@ -30,7 +31,7 @@ public class LogUtil {
     /**
      * library debug sign
      */
-    private static boolean mDebug = true;
+    private static boolean mDebug = BuildConfig.DEBUG;
 
     public static void setTag(String tag) {
         mTag = tag;

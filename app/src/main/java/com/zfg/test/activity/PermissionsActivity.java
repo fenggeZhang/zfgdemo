@@ -1,10 +1,8 @@
 package com.zfg.test.activity;
 
-import android.Manifest;
 import android.content.Intent;
 import android.view.View;
 
-import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 
@@ -13,7 +11,7 @@ import com.zfg.test.activity.base.BaseActivity;
  */
 public class PermissionsActivity extends BaseActivity {
 
-    final RxPermissions rxPermissions = new RxPermissions(this); // where this is an Activity or Fragment instance
+//    final RxPermissions rxPermissions = new RxPermissions(this); // where this is an Activity or Fragment instance
 
     @Override
     protected int getLayoutId() {
@@ -49,7 +47,7 @@ public class PermissionsActivity extends BaseActivity {
         intent.addCategory("android.intent.category.DEFAULT");
         startActivity(intent);
 
-        rxPermissions.request(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_CALENDAR, Manifest.permission.READ_CALL_LOG, Manifest.permission.READ_CONTACTS, Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_SMS, Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA, Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS
+      /*  rxPermissions.request(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_CALENDAR, Manifest.permission.READ_CALL_LOG, Manifest.permission.READ_CONTACTS, Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_SMS, Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA, Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS
                 )
                 .subscribe(granted -> {
                     if (granted) { // Always true pre-M
@@ -59,6 +57,6 @@ public class PermissionsActivity extends BaseActivity {
                         // Oups permission denied
                         showToast("拒绝了？");
                     }
-                });
+                });*/
     }
 }

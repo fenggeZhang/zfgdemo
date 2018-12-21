@@ -8,6 +8,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.billy.cc.core.component.CC;
 import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
+import com.squareup.leakcanary.LeakCanary;
 import com.zfg.test.utils.Logger;
 import com.zhouyou.http.EasyHttp;
 
@@ -38,7 +39,19 @@ public class MyApplication extends MultiDexApplication {
         initLog();
         initCc();
         initRxEasy();
+        initLeakCanary();
+    }
 
+    /**
+     * 内存泄漏收集
+     */
+    private void initLeakCanary() {
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
     }
 
     private void initRxEasy() {

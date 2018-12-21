@@ -47,6 +47,9 @@ public class GestureActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         Sensey.getInstance().stop();
+        Sensey.getInstance().stopShakeDetection(shakeListener);
+        Sensey.getInstance().stopMovementDetection(movementListener);
+        Sensey.getInstance().stopTouchTypeDetection();
     }
 
     //震动检测
@@ -190,4 +193,5 @@ public class GestureActivity extends BaseActivity {
         Sensey.getInstance().setupDispatchTouchEvent(event);
         return super.dispatchTouchEvent(event);
     }
+
 }

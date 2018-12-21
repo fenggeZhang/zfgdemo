@@ -13,6 +13,13 @@
     <uses-permission
         android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions"/>
+    <!--电话权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
 
     <application
         android:name=".MyApplication"
@@ -63,8 +70,7 @@
         </activity>
         <activity android:name=".activity.ArouterTestActivity">
         </activity>
-        <activity android:name=".kotlintest.MainKotlin"
-            android:screenOrientation="landscape">
+        <activity android:name=".kotlintest.MainKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -170,6 +176,10 @@
         <activity android:name=".activity.ScreenshotViewActivity">
         </activity>
         <activity android:name=".activity.QrCodeActivity">
+        </activity>
+        <activity android:name=".activity.CkMainActivity">
+        </activity>
+        <activity android:name=".activity.PermissionTestActivity">
         </activity>
     </application>
 

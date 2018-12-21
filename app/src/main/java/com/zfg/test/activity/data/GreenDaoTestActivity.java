@@ -11,6 +11,8 @@ import com.zfg.test.utils.GsonUtils;
 import com.zfg.test.utils.LogUtil;
 import com.zfg.test.utils.RetrofitUtil;
 
+import io.reactivex.disposables.Disposable;
+
 /**
  * greenDao 测试
  */
@@ -34,9 +36,7 @@ public class GreenDaoTestActivity extends BaseActivity {
 
     @Override
     protected void addListener() {
-
-
-        WebService.getInstance(this, "http://139.129.205.11:92").getName(1, RetrofitUtil.getJSONRequestBody(GSONUtil.toJson(new RequestData())), this);
+        WebService.getInstance(GreenDaoTestActivity.this, "http://139.129.205.11:92").getName(1, RetrofitUtil.getJSONRequestBody(GSONUtil.toJson(new RequestData())), this);
     }
 
     @Override
