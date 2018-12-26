@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--补间动画 位置转移动画效果-->
+    <translate
+        android:duration="2000"
+        android:fromXDelta="30"
+        android:fromYDelta="30"
+        android:toXDelta="-80"
+        android:toYDelta="300"/>
+    <!--
+fromXDelta  动画开始时候得X坐标上得位置
+fromYDelta  动画开始时候得Y坐标上得位置
+toXDelta    动画结束时候得X坐标上得位置
+toYDelta    动画结束时候得Y坐标上得位置
+
+都没有指定得话就是以自己为参照物
+duration    动画持续时间  单位毫秒
+    -->
+</set>

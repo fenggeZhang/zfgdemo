@@ -28,12 +28,13 @@ import java.util.List;
 /**
  * Created by zfg on 2018/6/11
  */
-public class AFragment extends Fragment{
+public class AFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private MyAdapter mMyAdapter;
     private List<TestBean> mTestBeans;
     private ScrollView a_scrollview;
     View mRootView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,21 +53,21 @@ public class AFragment extends Fragment{
 
     private void getHeigth() {
 //        LogUtil.e("scrollview:"+SizeUtils.getMeasuredHeight(a_scrollview));
-        LogUtil.e("recyclerview:"+SizeUtils.getMeasuredHeight(mRecyclerView));
-        EventBus.getDefault().post(""+SizeUtils.getMeasuredHeight(a_scrollview));
+        LogUtil.e("recyclerview:" + SizeUtils.getMeasuredHeight(mRecyclerView));
+        EventBus.getDefault().post("" + SizeUtils.getMeasuredHeight(a_scrollview));
     }
 
     private void initData() {
         mTestBeans = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
-            mTestBeans.add(new TestBean("数据"+i));
+            mTestBeans.add(new TestBean("数据" + i));
         }
     }
 
     private void initView() {
         mRecyclerView = mRootView.findViewById(R.id.a_recycler);
-        a_scrollview=mRootView.findViewById(R.id.a_scrollview);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),4));
+        a_scrollview = mRootView.findViewById(R.id.a_scrollview);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(getActivity()));
         mMyAdapter = new MyAdapter(R.layout.my_test_item, mTestBeans);
         mRecyclerView.setAdapter(mMyAdapter);

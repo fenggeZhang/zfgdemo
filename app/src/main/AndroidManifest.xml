@@ -13,7 +13,7 @@
     <uses-permission
         android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions"/>
-    <!--电话权限-->
+    <!-- 电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
     <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
@@ -180,6 +180,10 @@
         <activity android:name=".activity.CkMainActivity">
         </activity>
         <activity android:name=".activity.PermissionTestActivity">
+        </activity>
+        <activity android:name=".activity.anim.ZhenAnimActivity">
+        </activity>
+        <activity android:name=".activity.anim.BujianAnimActivity">
         </activity>
     </application>
 

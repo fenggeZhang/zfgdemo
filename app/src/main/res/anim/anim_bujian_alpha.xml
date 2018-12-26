@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--补间动画  透明度-->
+
+    <alpha
+        android:duration="6000"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+    <!--
+    0.0是完全透明  1.0是不透明
+    duration是动画持续时间 单位是毫秒
+    -->
+</set>

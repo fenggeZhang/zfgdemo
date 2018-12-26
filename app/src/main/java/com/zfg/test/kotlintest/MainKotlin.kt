@@ -10,6 +10,8 @@ import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.zfg.test.R
 import com.zfg.test.activity.*
+import com.zfg.test.activity.anim.BujianAnimActivity
+import com.zfg.test.activity.anim.ZhenAnimActivity
 import com.zfg.test.activity.chart.*
 import com.zfg.test.activity.data.GreenDaoTestActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
@@ -36,7 +38,8 @@ class MainKotlin : AppCompatActivity() {
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
-            , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
+            , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请", "帧动画"
+            , "补间动画"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -123,5 +126,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(QrCodeActivity::class.java)
         activityList.add(CkMainActivity::class.java)
         activityList.add(PermissionTestActivity::class.java)
+        activityList.add(ZhenAnimActivity::class.java)
+        activityList.add(BujianAnimActivity::class.java)
     }
 }
