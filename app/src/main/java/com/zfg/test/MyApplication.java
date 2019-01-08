@@ -24,8 +24,6 @@ public class MyApplication extends MultiDexApplication {
         super.onCreate();
 //        bug收集
 //        CrashReport.initCrashReport(getApplicationContext(), "5ba10b0624", false);
-//        测试
-        Stetho.initializeWithDefaults(this);
         if (BuildConfig.DEBUG) {
             // 这两行必须写在init之前，否则这些配置在init过程中将无效
             ARouter.openLog();
@@ -40,6 +38,14 @@ public class MyApplication extends MultiDexApplication {
         initCc();
         initRxEasy();
         initLeakCanary();
+        initStetho();
+    }
+
+    /**
+     * 应用监控
+     */
+    private void initStetho() {
+        Stetho.initializeWithDefaults(this);//使用默认值初始化
     }
 
     /**

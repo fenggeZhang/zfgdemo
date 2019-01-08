@@ -185,6 +185,12 @@
         </activity>
         <activity android:name=".activity.anim.BujianAnimActivity">
         </activity>
+        <activity android:name=".activity.anim.ValueAnimActivity">
+        </activity>
+        <activity android:name=".activity.MeasureUiActivity">
+        </activity>
+        <activity android:name=".activity.ViewDispatchEventActivity">
+        </activity>
     </application>
 
 </manifest>
