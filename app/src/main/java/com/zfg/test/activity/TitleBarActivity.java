@@ -8,8 +8,11 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.zfg.test.R;
+import com.zfg.test.utils.ToastUtils;
 
 public class TitleBarActivity extends AppCompatActivity {
 
@@ -47,5 +50,20 @@ public class TitleBarActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         collapsingToolbarLayout = findViewById(R.id.collapsingToolbar);
         mCoordinatorLayout = findViewById(R.id.my_CoordinatorLayout);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_activity_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                ToastUtils.show(this, "搜索");
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

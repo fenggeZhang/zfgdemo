@@ -35,12 +35,12 @@ class MainKotlin : AppCompatActivity() {
             "注解", "注解2", "event数据", "event数据1", "动画", "视觉图", "测量高度"
             , "三级分类", "头部Visible", "图形验证码", "签名", "请求", "换肤"
             , "新控件", "引导层", "多种状态", "侧滑首页", "适配", "横屏-竖屏"
-            , "悬浮按钮", "分组+多分类", "拖拽分组", "伸缩text", "雷达扫描动画"
+            , "悬浮按钮", "分组+多分类", "二级分类", "拖拽分组", "伸缩text", "雷达扫描动画"
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
-            , "帧动画", "补间动画", "属性动画", "measure","分发"
+            , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -98,6 +98,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(IntentAActivity::class.java)
         activityList.add(FloatingActivity::class.java)
         activityList.add(ExpandableRecyclerActivity::class.java)
+        activityList.add(ExpandableClassicRecyclerActivity::class.java)
         activityList.add(DragGoupActivity::class.java)
         activityList.add(ExpandableTextViewActivity::class.java)
         activityList.add(RadarScanActivity::class.java)
@@ -132,5 +133,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(ValueAnimActivity::class.java)
         activityList.add(MeasureUiActivity::class.java)
         activityList.add(ViewDispatchEventActivity::class.java)
+        activityList.add(ContactListActivity::class.java)
+        activityList.add(CarListActivity::class.java)
     }
 }

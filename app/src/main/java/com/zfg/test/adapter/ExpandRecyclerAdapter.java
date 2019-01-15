@@ -57,6 +57,7 @@ public class ExpandRecyclerAdapter extends BaseMultiItemQuickAdapter<MultiItemEn
             case TYPE_LEVEL_1: {
                 final ItemType2 lv0 = (ItemType2) item;
                 helper.setText(R.id.title, lv0.getTitle());
+                helper.setImageResource(R.id.iv, lv0.isExpanded() ? R.mipmap.arrow_b : R.mipmap.arrow_r);
                 helper.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

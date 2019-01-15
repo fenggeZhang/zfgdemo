@@ -191,6 +191,16 @@
         </activity>
         <activity android:name=".activity.ViewDispatchEventActivity">
         </activity>
+        <activity android:name=".activity.chart.PieValueChartActivity">
+        </activity>
+        <activity android:name=".activity.ExpandableClassicRecyclerActivity">
+        </activity>
+        <activity android:name=".activity.ContactListActivity">
+        </activity>
+        <activity android:name=".activity.data.DataTestActivity">
+        </activity>
+        <activity android:name=".activity.CarListActivity">
+        </activity>
     </application>
 
 </manifest>

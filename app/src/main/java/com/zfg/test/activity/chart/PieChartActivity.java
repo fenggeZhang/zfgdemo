@@ -80,12 +80,19 @@ public class PieChartActivity extends BaseActivity {
         data.setValueFormatter(new PercentFormatter());
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.WHITE);
+        //下面得几句是可以让百分比数字在图外指示方式显示
+     /*   data.setValueTextColors(colors);
 //        data.setValueTypeface(tfLight);
-        mPieChart.setData(data);
+        mPieChart.setUsePercentValues(true);
+
+        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);*/
+
+//        data.setValueTextColor(Color.BLACK);
 
         // undo all highlights
         mPieChart.highlightValues(null);
 
+        mPieChart.setData(data);
         mPieChart.invalidate();
     }
 

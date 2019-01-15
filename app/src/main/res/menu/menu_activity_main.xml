@@ -10,4 +10,26 @@
         android:showAsAction="ifRoom"
         app:showAsAction="ifRoom"
         tools:ignore="AppCompatResource"/>
+    <item
+        android:id="@+id/action_test1"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="搜索1"
+        android:showAsAction="collapseActionView"
+        app:showAsAction="collapseActionView"
+        tools:ignore="AppCompatResource"/>
+    <item
+        android:id="@+id/action_test2"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="搜索2"
+        android:showAsAction="collapseActionView"
+        app:showAsAction="collapseActionView"
+        tools:ignore="AppCompatResource"/>
+
+    <item
+        android:id="@+id/action_test3"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="搜索2"
+        android:showAsAction="never"
+        app:showAsAction="collapseActionView"
+        tools:ignore="AppCompatResource"/>
 </menu>
