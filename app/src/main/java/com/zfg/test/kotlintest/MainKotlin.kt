@@ -15,6 +15,7 @@ import com.zfg.test.activity.anim.ValueAnimActivity
 import com.zfg.test.activity.anim.ZhenAnimActivity
 import com.zfg.test.activity.chart.*
 import com.zfg.test.activity.data.GreenDaoTestActivity
+import com.zfg.test.activity.image.GifActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
@@ -40,7 +41,8 @@ class MainKotlin : AppCompatActivity() {
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
-            , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类"
+            , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
+            "spannableString", "gif","socket"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -135,5 +137,8 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(ViewDispatchEventActivity::class.java)
         activityList.add(ContactListActivity::class.java)
         activityList.add(CarListActivity::class.java)
+        activityList.add(SpannableStringActivity::class.java)
+        activityList.add(GifActivity::class.java)
+        activityList.add(SocketTestActivity::class.java)
     }
 }

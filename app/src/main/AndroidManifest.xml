@@ -201,6 +201,14 @@
         </activity>
         <activity android:name=".activity.CarListActivity">
         </activity>
+        <activity android:name=".activity.SpannableStringActivity">
+        </activity>
+        <activity android:name=".activity.FlowTagActivity">
+        </activity>
+        <activity android:name=".activity.image.GifActivity">
+        </activity>
+        <activity android:name=".activity.SocketTestActivity">
+        </activity>
     </application>
 
 </manifest>

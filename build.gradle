@@ -17,6 +17,7 @@ buildscript {
         // in the individual module build.gradle files
 
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
     }
 }
 
