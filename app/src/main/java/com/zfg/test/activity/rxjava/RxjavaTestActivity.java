@@ -10,21 +10,25 @@ import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zfg.test.utils.LogUtil;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.Maybe;
+import io.reactivex.MaybeObserver;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
+import io.reactivex.schedulers.Schedulers;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 public class RxjavaTestActivity extends BaseActivity {
     private TextView mTextView;
@@ -48,6 +52,54 @@ public class RxjavaTestActivity extends BaseActivity {
 //        testFrom();
         testJust();
 //        testInterval();
+
+        testJust1();
+    }
+
+    private void testJust1() {
+//判断是否 ok
+        Maybe.just(isOk())
+//                可能涉及到IO操作 放在子线程
+                .subscribeOn(Schedulers.newThread())
+//                取回结果传到主进程
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new MaybeObserver<Boolean>() {
+
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onSuccess(Boolean aBoolean) {
+                        if (aBoolean) {
+                            LogUtil.e("ok");
+                        } else {
+                            LogUtil.e("no");
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    private boolean isOk() {
+
+        Random random = new Random();
+        int x = random.nextInt();
+        if (x / 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -55,7 +107,7 @@ public class RxjavaTestActivity extends BaseActivity {
      * 加上take（5）  就会限制次数 执行5次
      */
     private void testInterval() {
-        Observable.interval(0, 1, TimeUnit.SECONDS)
+      /*  Observable.interval(0, 1, TimeUnit.SECONDS)
                 .take(60)
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Subscriber<Long>() {
@@ -77,7 +129,7 @@ public class RxjavaTestActivity extends BaseActivity {
                         mTextView.setText(sencond + "s");
                         LogUtil.e("Next" + aLong);
                     }
-                });
+                });*/
     }
 
     /**

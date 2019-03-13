@@ -124,5 +124,16 @@ public class SocketTestActivity extends Activity implements Runnable {
         }
     };
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        try {
+            socket.close();
+            in.close();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
 }
