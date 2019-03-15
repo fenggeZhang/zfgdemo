@@ -10,9 +10,16 @@ import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zfg.test.utils.LogUtil;
 
+import org.intellij.lang.annotations.Flow;
+import org.reactivestreams.Subscription;
+
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Maybe;
 import io.reactivex.MaybeObserver;
 import io.reactivex.ObservableEmitter;
@@ -50,10 +57,66 @@ public class RxjavaTestActivity extends BaseActivity {
 //        test2();
 //        test3();
 //        testFrom();
-        testJust();
+//        testJust();
 //        testInterval();
 
-        testJust1();
+//        testJust1();
+        testFlowable();
+    }
+
+    /**
+     * 03-14 11:15:13.872 2341-2341/com.zfg.test E/LogUtil: onSubscribe
+     * 03-14 11:15:13.902 2341-2656/com.zfg.test E/LogUtil: emit 1
+     * 03-14 11:15:13.902 2341-2656/com.zfg.test E/LogUtil: emit 2
+     * 03-14 11:15:13.912 2341-2656/com.zfg.test E/LogUtil: emit 3
+     * 03-14 11:15:13.912 2341-2656/com.zfg.test E/LogUtil: emit onComplete
+     * 03-14 11:15:13.952 2341-2341/com.zfg.test E/LogUtil: onNext 1
+     * 03-14 11:15:13.952 2341-2341/com.zfg.test E/LogUtil: onNext 2
+     * 03-14 11:15:13.952 2341-2341/com.zfg.test E/LogUtil: onNext 3
+     * 03-14 11:15:13.952 2341-2341/com.zfg.test E/LogUtil: onComplete
+     */
+    private void testFlowable() {
+        Flowable.create(new FlowableOnSubscribe<Integer>() {
+                            @Override
+                            public void subscribe(FlowableEmitter<Integer> e) throws Exception {
+                                LogUtil.e("emit 1");
+                                e.onNext(1);
+                                LogUtil.e("emit 2");
+                                e.onNext(2);
+                                LogUtil.e("emit 3");
+                                e.onNext(3);
+                                LogUtil.e("emit onComplete");
+                                e.onComplete();
+                                LogUtil.e("emit end");
+                            }
+                        },
+//                需要指定背压策略
+                BackpressureStrategy.BUFFER)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new org.reactivestreams.Subscriber<Integer>() {
+                    @Override
+                    public void onSubscribe(Subscription s) {
+                        LogUtil.e("onSubscribe");
+                        s.request(Long.MAX_VALUE);  //注意这句代码
+//                        这句代码实际就是设置同时处理事件的能力 比如上游发送事件是3个 设置为3也可以的
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        LogUtil.e("onNext " + integer);
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        LogUtil.e("onError " + t);
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        LogUtil.e("onComplete ");
+                    }
+                });
     }
 
     private void testJust1() {

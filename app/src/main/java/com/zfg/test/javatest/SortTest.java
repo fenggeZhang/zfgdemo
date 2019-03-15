@@ -13,7 +13,7 @@ public class SortTest {
     /**
      * 冒泡排序
      */
-    private static void bubbleSort(int[] arrs) {
+    public static void bubbleSort(int[] arrs) {
         for (int i = 1; i < arrs.length; i++) {
             for (int j = 0; j < arrs.length - i; j++) {
                 if (arrs[j] > arrs[j + 1]) {
