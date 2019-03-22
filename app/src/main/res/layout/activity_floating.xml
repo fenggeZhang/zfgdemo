@@ -6,6 +6,7 @@
     android:id="@+id/content_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_apl_color"
     tools:context="com.zfg.test.activity.FloatingActivity">
 
     <android.support.design.widget.FloatingActionButton

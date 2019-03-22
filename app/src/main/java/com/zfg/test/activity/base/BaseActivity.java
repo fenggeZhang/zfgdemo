@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.r0adkll.slidr.Slidr;
 import com.zfg.test.R;
 import com.zfg.test.data.http.ErrorHelper;
 import com.zfg.test.data.http.HttpCallback;
@@ -39,6 +40,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
         setContentView(getLayoutId());
         mContext = this;
         initView();
+        Slidr.attach(this);
     }
 
     protected abstract int getLayoutId();

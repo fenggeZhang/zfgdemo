@@ -12,6 +12,7 @@ Android的Logo是由Ascender公司设计的，诞生于2010年，其设计灵感
     <string name="nav_my_collect">收藏</string>
     <string name="nav_todo">待办</string>
     <string name="nav_setting">设置</string>
+    <string name="nav_about_me">关于我</string>
     <string name="common_title">标题</string>
     <string name="image_desc">图片描述</string>
     <string name="right">确定</string>

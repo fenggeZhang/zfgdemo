@@ -6,7 +6,11 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Switch
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.zfg.test.R
 import com.zfg.test.activity.*
@@ -22,6 +26,7 @@ import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
+import com.zfg.test.utils.ToastUtils
 
 /**
  * Created by zfg on 2018/6/15
@@ -42,12 +47,13 @@ class MainKotlin : AppCompatActivity() {
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
             , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
-            "spannableString", "gif","socket"
+            "spannableString", "gif", "socket"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
     val myAdapter: MianAdapter = MianAdapter(R.layout.my_test_item, list);
     lateinit var recyclerView: RecyclerView
+    lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,14 +70,23 @@ class MainKotlin : AppCompatActivity() {
         floating_action_btn.setOnClickListener { v: View? ->
             recyclerView.scrollToPosition(0)//滑动到顶部 fragment就是 scrolltotop
         }
+        toolbar.setOnMenuItemClickListener({ item ->
+            run {
+                if (item.itemId == R.id.nav_setting)
+                    ToastUtils.show(this, "关于我")
+            }
+            true
+        })
     }
 
     private fun initView() {
         recyclerView = findViewById(R.id.my_recycler)
+        toolbar = findViewById(R.id.toolbar)
         floating_action_btn = findViewById(R.id.floating_action_btn)
         recyclerView.setLayoutManager(GridLayoutManager(this, 4))
         recyclerView.addItemDecoration(DividerGridItemDecoration(this))
         recyclerView.adapter = myAdapter
+        setSupportActionBar(toolbar)
     }
 
     private fun initData() {
@@ -140,5 +155,10 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(SpannableStringActivity::class.java)
         activityList.add(GifActivity::class.java)
         activityList.add(SocketTestActivity::class.java)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_nav_menu, menu)
+        return true
     }
 }

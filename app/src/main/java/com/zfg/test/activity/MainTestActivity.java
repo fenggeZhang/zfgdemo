@@ -44,7 +44,6 @@ public class MainTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_test);
         initView();
         initDrawerLayout();
-
     }
 
     private void initDrawerLayout() {

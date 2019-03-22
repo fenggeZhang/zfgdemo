@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/root_layout"
+    android:background="@color/bg_apl_color"
     tools:context=".activity.FragmentsActivity">
     <Button
         android:text="获取高度"

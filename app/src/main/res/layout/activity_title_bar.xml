@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_CoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/my_CoordinatorLayout"
+    android:background="@color/bg_apl_color"
     tools:context=".activity.TitleBarActivity">
 
     <android.support.design.widget.AppBarLayout

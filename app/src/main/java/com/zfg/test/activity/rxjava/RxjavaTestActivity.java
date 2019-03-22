@@ -33,6 +33,7 @@ import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 import rx.Observable;
 import rx.Subscriber;
+import rx.exceptions.OnErrorThrowable;
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
@@ -61,7 +62,106 @@ public class RxjavaTestActivity extends BaseActivity {
 //        testInterval();
 
 //        testJust1();
-        testFlowable();
+//        testFlowable();
+//        testMap();
+        testFlatMap();
+        testConcatMap();
+    }
+
+    /**
+     * concatMap操作符，将Observable发送的数据集合转换为Observable集合
+     * 解决了flatMap的交叉问题，将发送的数据连接发送
+     * <p>
+     * 按次序发送
+     */
+    private void testConcatMap() {
+        String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
+        Observable.from(observableArr).concatMap(new Func1<String, Observable<String>>() {
+            @Override
+            public Observable<String> call(String s) {
+                return Observable.just("****ConcatMap****  My name is " + s);
+            }
+        }).subscribe(new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+                LogUtil.e("onCompleted");
+                LogUtil.e("***********************************");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                LogUtil.e("onNext:" + s);
+            }
+        });
+    }
+
+    /**
+     * flatMap操作符，将Observable发送的数据集合转换为Observable集合
+     * flatMap的合并运行允许交叉，允许交错的发送事件
+     */
+    private void testFlatMap() {
+        String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
+        Observable.from(observableArr).flatMap(new Func1<String, Observable<String>>() {
+            @Override
+            public Observable<String> call(String s) {
+                return Observable.just("****FlatMap****  My name is " + s);
+            }
+        }).subscribe(new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+                LogUtil.e("onCompleted");
+                LogUtil.e("***********************************");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                LogUtil.e("onNext:" + s);
+            }
+        });
+    }
+
+    private void testMap() {
+        Observable.create(new Observable.OnSubscribe<String>() {
+
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                subscriber.onNext("123456");
+                subscriber.onNext("11111");
+                subscriber.onNext("22222");
+                subscriber.onCompleted();
+            }
+        }).map(new Func1<String, Integer>() {
+
+            @Override
+            public Integer call(String s) {
+                return Integer.parseInt(s);
+            }
+        }).subscribe(new Subscriber<Integer>() {
+            @Override
+            public void onCompleted() {
+                LogUtil.e("onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                LogUtil.e("onError");
+            }
+
+            @Override
+            public void onNext(Integer integer) {
+                LogUtil.e("integer:" + integer);
+            }
+        });
     }
 
     /**

@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!--下面的两个属性是为了 右滑关闭页面时候设置的背景是透明而不是白色-->
+        <!--这里设置了半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--背景是透明的-->
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
     <declare-styleable name="VerifyCode">
@@ -79,6 +84,7 @@
         <!--水滴显示和消失的速度-->
         <attr name="flicker" format="float"/>
     </declare-styleable>
+
     <style name="tweetName">
         <item name="android:textColor">@color/hard_color</item>
         <item name="android:textStyle">bold</item>
@@ -89,6 +95,7 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">1</item>
     </style>
+
     <style name="tweetText">
         <item name="android:textSize">13sp</item>
         <item name="android:textColorLink">#888888</item>

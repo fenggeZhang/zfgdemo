@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/other">
+
+      <!--  <item
+            android:id="@+id/nav_collect"
+            android:icon="@drawable/ic_like"
+            android:title="@string/nav_my_collect" />
+
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/ic_todo_default_24dp"
+            android:title="@string/nav_todo" />-->
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting_white_24dp"
+            android:title="@string/nav_about_me" />
+
+
+    </group>
+
+</menu>

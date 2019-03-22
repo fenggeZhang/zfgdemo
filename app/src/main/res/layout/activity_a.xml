@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_apl_color"
     tools:context=".activity.AActivity">
 
     <Button
-        android:textColor="@color/gray_33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="send"
-        android:text="send"/>
+        android:text="send"
+        android:textColor="@color/gray_33"/>
 
     <Button
-        android:textColor="@color/gray_33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="start"
-        android:text="start"/>
+        android:text="start"
+        android:textColor="@color/gray_33"/>
 </LinearLayout>
