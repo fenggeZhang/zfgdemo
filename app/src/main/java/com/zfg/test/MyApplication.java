@@ -52,12 +52,15 @@ public class MyApplication extends MultiDexApplication {
      * 内存泄漏收集
      */
     private void initLeakCanary() {
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
+        if (BuildConfig.DEBUG) {
+            if (LeakCanary.isInAnalyzerProcess(this)) {
+                // This process is dedicated to LeakCanary for heap analysis.
+                // You should not init your app in this process.
+                return;
+            }
+            LeakCanary.install(this);
         }
-        LeakCanary.install(this);
+
     }
 
     private void initRxEasy() {

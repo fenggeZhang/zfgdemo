@@ -1,1 +1,1 @@
-include ':app', ':ccdemo', ':ccdemo2'
+include ':app'

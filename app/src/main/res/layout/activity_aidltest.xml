@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg_apl_color"
+    android:orientation="vertical"
+    tools:context=".binder.AIDLTestActivity">
+
+    <include layout="@layout/common_titlebar_layout"/>
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_main_next_btn"
+        android:text="连接"/>
+</LinearLayout>

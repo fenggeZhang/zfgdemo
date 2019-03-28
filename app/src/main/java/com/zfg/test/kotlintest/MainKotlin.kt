@@ -24,6 +24,7 @@ import com.zfg.test.activity.loaddata.LoadMoreDataActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
+import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
 import com.zfg.test.utils.ToastUtils
@@ -47,7 +48,7 @@ class MainKotlin : AppCompatActivity() {
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
             , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
-            "spannableString", "gif", "socket"
+            "spannableString", "gif", "socket", "aidl通信"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -155,6 +156,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(SpannableStringActivity::class.java)
         activityList.add(GifActivity::class.java)
         activityList.add(SocketTestActivity::class.java)
+        activityList.add(AIDLTestActivity::class.java)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
