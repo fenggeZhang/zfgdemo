@@ -54,7 +54,6 @@ public class AIDLTestActivity extends BaseActivity {
                 }
             }
         });
-
     }
 
     @Override
@@ -71,26 +70,6 @@ public class AIDLTestActivity extends BaseActivity {
     protected int getTitleStringId() {
         return 0;
     }
-
-   /* public void addBook(View view) {
-        if (!mBound) {
-//            没有连接  尝试连接
-            attempToBindService();
-            ToastUtils.show(this, "当前服务器处于未连接状态，正在尝试重连，请稍后重试！");
-        }
-        if (mBookManager == null)
-            return;
-
-        Book book = new Book();
-        book.setBookId(11);
-        book.setBookName("《JVM深入学习》");
-        try {
-            mBookManager.addBook(book);
-            LogUtil.e(book.toString());
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-    }*/
 
     /**
      * 尝试与服务器建立连接
