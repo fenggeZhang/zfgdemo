@@ -14,6 +14,7 @@ import com.zfg.test.data.http.ErrorHelper;
 import com.zfg.test.data.http.HttpCallback;
 import com.zfg.test.data.http.HttpTaskRunnable;
 import com.zfg.test.data.http.bean.BaseEntity;
+import com.zfg.test.utils.LogUtil;
 import com.zfg.test.utils.ToastUtils;
 import com.zfg.test.weigt.ILoadingDialog;
 
@@ -126,5 +127,11 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
                 mDisposable.get(i).dispose();
             }
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        LogUtil.e("activity onStop");
     }
 }

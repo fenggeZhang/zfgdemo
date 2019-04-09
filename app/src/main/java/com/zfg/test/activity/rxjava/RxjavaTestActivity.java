@@ -6,6 +6,8 @@ import android.text.format.Time;
 import android.view.View;
 import android.widget.TextView;
 
+import com.uber.autodispose.AutoDispose;
+import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zfg.test.utils.LogUtil;
@@ -226,6 +228,7 @@ public class RxjavaTestActivity extends BaseActivity {
                 .subscribeOn(Schedulers.newThread())
 //                取回结果传到主进程
                 .observeOn(AndroidSchedulers.mainThread())
+//                .as(AutoDispose.<Long>autoDisposable(AndroidLifecycleScopeProvider.from(this)))
                 .subscribe(new MaybeObserver<Boolean>() {
 
                     @Override

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MessageHandler</title>
+
+</head>
+
+<body>
+
+<div id="btn">页面加载就能获取到数据</div>
+<script>
+        // let btn = document.getElementById("btn");
+        var u = navigator.userAgent;
+        var url = window.location.href; //获取url
+        // console.log(u)
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var data = {
+            "shareFriend": "0",
+            "shareMoments": "0",
+            "openWithBrowser": "0",
+            "copyLink": "1",
+            "webRefresh": "1"
+        }
+        window.addEventListener('load', function (e) {
+            if (isAndroid) {
+                android_js_interface.GetAuthorizationList(JSON.stringify(data));
+            } else if (isiOS) {
+                window.webkit.messageHandlers.GetAuthorizationList.postMessage(data);
+            } else {
+                // android_js_interface.GetAuthorizationList(data);
+                alert(JSON.stringify(data))
+            }
+        })
+    </script>
+</body>
+
+</html>

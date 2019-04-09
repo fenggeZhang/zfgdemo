@@ -12,6 +12,9 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Switch
 import com.chad.library.adapter.base.BaseQuickAdapter
+import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
+import com.ethanhua.skeleton.Skeleton
+import com.ethanhua.skeleton.SkeletonScreen
 import com.zfg.test.R
 import com.zfg.test.activity.*
 import com.zfg.test.activity.anim.BujianAnimActivity
@@ -28,6 +31,9 @@ import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
 import com.zfg.test.utils.ToastUtils
+import io.reactivex.Observable
+import io.reactivex.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 /**
  * Created by zfg on 2018/6/15
@@ -55,6 +61,7 @@ class MainKotlin : AppCompatActivity() {
     val myAdapter: MianAdapter = MianAdapter(R.layout.my_test_item, list);
     lateinit var recyclerView: RecyclerView
     lateinit var toolbar: Toolbar
+    lateinit var skeletonScreen: RecyclerViewSkeletonScreen
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,10 +95,16 @@ class MainKotlin : AppCompatActivity() {
         recyclerView.addItemDecoration(DividerGridItemDecoration(this))
         recyclerView.adapter = myAdapter
         setSupportActionBar(toolbar)
+     /*   skeletonScreen = Skeleton.bind(recyclerView)
+                .adapter(myAdapter)
+                .load(R.layout.layout_default_item_skeleton)
+                .show()
+        skeletonScreen.hide()
+*/
     }
 
     private fun initData() {
-        activityList.add(BaseWebKotlin::class.java)
+        activityList.add(BaseWebViewActivity::class.java)
         activityList.add(AcmTestActivity::class.java)
         activityList.add(LinearLayoutActivity::class.java)
         activityList.add(SearchActivity::class.java)
