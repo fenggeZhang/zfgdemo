@@ -41,7 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
         setContentView(getLayoutId());
         mContext = this;
         initView();
-        Slidr.attach(this);
+//        Slidr.attach(this);
     }
 
     protected abstract int getLayoutId();

@@ -26,6 +26,7 @@ import com.zfg.test.activity.image.GifActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
+import com.zfg.test.activity.ui.ViewStubActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
@@ -95,12 +96,12 @@ class MainKotlin : AppCompatActivity() {
         recyclerView.addItemDecoration(DividerGridItemDecoration(this))
         recyclerView.adapter = myAdapter
         setSupportActionBar(toolbar)
-     /*   skeletonScreen = Skeleton.bind(recyclerView)
-                .adapter(myAdapter)
-                .load(R.layout.layout_default_item_skeleton)
-                .show()
-        skeletonScreen.hide()
-*/
+        /*   skeletonScreen = Skeleton.bind(recyclerView)
+                   .adapter(myAdapter)
+                   .load(R.layout.layout_default_item_skeleton)
+                   .show()
+           skeletonScreen.hide()
+   */
     }
 
     private fun initData() {

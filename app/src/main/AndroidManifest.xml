@@ -222,6 +222,8 @@
 
         <activity android:name=".binder.AIDLTestActivity">
         </activity>
+        <activity android:name=".activity.ui.ViewStubActivity">
+        </activity>
     </application>
 
 </manifest>
