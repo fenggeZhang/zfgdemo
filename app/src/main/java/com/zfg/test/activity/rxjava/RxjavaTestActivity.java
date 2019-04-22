@@ -1,22 +1,16 @@
 package com.zfg.test.activity.rxjava;
 
 import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
-import android.text.format.Time;
 import android.view.View;
 import android.widget.TextView;
 
-import com.uber.autodispose.AutoDispose;
-import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zfg.test.utils.LogUtil;
 
-import org.intellij.lang.annotations.Flow;
 import org.reactivestreams.Subscription;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -24,21 +18,9 @@ import io.reactivex.FlowableEmitter;
 import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Maybe;
 import io.reactivex.MaybeObserver;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
-import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
-import rx.Observable;
-import rx.Subscriber;
-import rx.exceptions.OnErrorThrowable;
-import rx.functions.Action0;
-import rx.functions.Action1;
-import rx.functions.Func1;
 
 public class RxjavaTestActivity extends BaseActivity {
     private TextView mTextView;
@@ -77,7 +59,7 @@ public class RxjavaTestActivity extends BaseActivity {
      * 按次序发送
      */
     private void testConcatMap() {
-        String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
+      /*  String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
         Observable.from(observableArr).concatMap(new Func1<String, Observable<String>>() {
             @Override
             public Observable<String> call(String s) {
@@ -99,7 +81,7 @@ public class RxjavaTestActivity extends BaseActivity {
             public void onNext(String s) {
                 LogUtil.e("onNext:" + s);
             }
-        });
+        });*/
     }
 
     /**
@@ -107,7 +89,7 @@ public class RxjavaTestActivity extends BaseActivity {
      * flatMap的合并运行允许交叉，允许交错的发送事件
      */
     private void testFlatMap() {
-        String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
+     /*   String[] observableArr = {"Alex", "Max", "Bruce", "Frank", "Tom"};
         Observable.from(observableArr).flatMap(new Func1<String, Observable<String>>() {
             @Override
             public Observable<String> call(String s) {
@@ -129,11 +111,11 @@ public class RxjavaTestActivity extends BaseActivity {
             public void onNext(String s) {
                 LogUtil.e("onNext:" + s);
             }
-        });
+        });*/
     }
 
     private void testMap() {
-        Observable.create(new Observable.OnSubscribe<String>() {
+       /* Observable.create(new Observable.OnSubscribe<String>() {
 
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -163,7 +145,7 @@ public class RxjavaTestActivity extends BaseActivity {
             public void onNext(Integer integer) {
                 LogUtil.e("integer:" + integer);
             }
-        });
+        });*/
     }
 
     /**
@@ -305,7 +287,7 @@ public class RxjavaTestActivity extends BaseActivity {
      * 11-22 13:44:18.219 3842-3842/com.zfg.test.debug E/LogUtil: onCompleted
      */
     private void testJust() {
-        Observable.just(1, 2, 3)
+      /*  Observable.just(1, 2, 3)
                 .subscribe(new Subscriber<Integer>() {
                     @Override
                     public void onCompleted() {
@@ -321,14 +303,14 @@ public class RxjavaTestActivity extends BaseActivity {
                     public void onNext(Integer integer) {
                         LogUtil.e("数据：" + integer);
                     }
-                });
+                });*/
     }
 
     /**
      * 输出结果  循环输出items 得值 然后 输出完成！
      */
     private void testFrom() {
-        Integer[] items = {11, 5, 7, 80, 44};
+      /*  Integer[] items = {11, 5, 7, 80, 44};
         Observable observable = Observable.from(items);
         observable.subscribe(new Action1<Integer>() {
             @Override
@@ -345,7 +327,7 @@ public class RxjavaTestActivity extends BaseActivity {
             public void call() {
                 LogUtil.e("完成！");
             }
-        });
+        });*/
 
     }
 

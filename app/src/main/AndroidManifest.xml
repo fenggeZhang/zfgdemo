@@ -224,6 +224,8 @@
         </activity>
         <activity android:name=".activity.ui.ViewStubActivity">
         </activity>
+        <activity android:name=".activity.rxjava.Rxjava2TestActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -101,7 +101,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+//    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     //KenBurnsView 视差图片控件
     implementation 'com.flaviofaria:kenburnsview:1.0.7'

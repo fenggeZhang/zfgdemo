@@ -24,6 +24,7 @@ import com.zfg.test.activity.chart.*
 import com.zfg.test.activity.data.GreenDaoTestActivity
 import com.zfg.test.activity.image.GifActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
+import com.zfg.test.activity.rxjava.Rxjava2TestActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.activity.ui.ViewStubActivity
@@ -52,7 +53,7 @@ class MainKotlin : AppCompatActivity() {
             , "悬浮按钮", "分组+多分类", "二级分类", "拖拽分组", "伸缩text", "雷达扫描动画"
             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
-            , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava"
+            , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava", "Rxjava2"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
             , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
             "spannableString", "gif", "socket", "aidl通信"
@@ -154,6 +155,7 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(LoadMoreDataActivity::class.java)
         activityList.add(GreenDaoTestActivity::class.java)
         activityList.add(RxjavaTestActivity::class.java)
+        activityList.add(Rxjava2TestActivity::class.java)
         activityList.add(MultBarChartsActivity::class.java)
         activityList.add(MyPopuWindowActivity::class.java)
         activityList.add(SelectTimeActivity::class.java)
