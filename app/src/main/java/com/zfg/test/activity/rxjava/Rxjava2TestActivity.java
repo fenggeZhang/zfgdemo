@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
+import com.zhouyou.http.EasyHttp;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -44,7 +45,6 @@ public class Rxjava2TestActivity extends BaseActivity {
 
     @Override
     protected void setupView() {
-
     }
 
     @Override

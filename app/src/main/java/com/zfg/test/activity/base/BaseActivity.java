@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
 
     private RelativeLayout mCommonTitleLayout;
     private TextView mCommonTitleTv;
-    public Context mContext;
+    protected Context mContext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

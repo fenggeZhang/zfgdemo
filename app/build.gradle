@@ -54,6 +54,7 @@ android {
             applicationIdSuffix ".debug"   //等同于“com.example.myapplicationtest.debug”
         }*/
     }
+
     signingConfigs {
         config {
             storeFile file("demokey.jks")//keystore的路径

@@ -2,6 +2,8 @@ package com.zfg.test.activity.rxjava;
 
 import android.annotation.SuppressLint;
 
+import junit.framework.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -24,6 +26,7 @@ public class Rxjava2Test {
         repeat();
         interval();
         timer();
+//        Assert.assertTrue("错误！", true);
     }
 
     /**
