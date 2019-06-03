@@ -4,7 +4,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 
@@ -36,12 +35,12 @@ public class GifActivity extends BaseActivity {
     @Override
     protected void initData() {
 
-        Glide.with(mContext)
+      /*  Glide.with(mContext)
                 .load(R.drawable.icon_test)
                 .into(new GlideDrawableImageViewTarget(mGif1Iv, 3));
 
         Glide.with(this).load(R.drawable.icon_test)
-                .asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(mGif2Iv);
+                .asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(mGif2Iv);*/
     }
 
     @Override

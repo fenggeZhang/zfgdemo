@@ -1,19 +1,20 @@
 package com.zfg.test.activity;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.JavascriptInterface;
-import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.zfg.test.R;
 import com.zfg.test.utils.LogUtil;
-import com.zfg.test.utils.ToastUtils;
 
+/**
+ * 关闭硬件加速（页面闪烁，出现白块现象）
+ *
+ * 动态添加
+ */
 public class BaseWebViewActivity extends AppCompatActivity {
     WebView mWebView;
 
@@ -110,6 +111,7 @@ public class BaseWebViewActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         LogUtil.e("zfg:onDestroy");
+        mWebView.destroy();
     }
 
     @Override

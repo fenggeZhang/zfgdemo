@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ehks.OrderActivity">
+
+    <include layout="@layout/common_titlebar_layout"/>
+
+    <!--    <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tl_1"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            tl:tl_bar_color="#ffffff"
+            tl:tl_indicator_color="#2A99FF"
+            tl:tl_indicator_corner_radius="4dp"
+            tl:tl_tab_padding="24dp"
+            tl:tl_textsize="18sp"/>-->
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/tl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tl:tl_bar_color="#ffffff"
+        tl:tl_indicator_color="#2A99FF"
+        tl:tl_indicator_corner_radius="4dp"
+        tl:tl_tab_padding="24dp"
+        tl:tl_tab_width="100dp"
+        tl:tl_textsize="18sp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

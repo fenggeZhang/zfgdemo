@@ -8,11 +8,11 @@ import java.util.Stack;
  */
 public class TestC {
 
-    public static class ListNode {
+    public static class ListNode1 {
         int val;
-        ListNode next;
+        ListNode1 next;
 
-        ListNode(int x) {
+        ListNode1(int x) {
             val = x;
         }
     }
@@ -36,15 +36,15 @@ public class TestC {
 
 //        int a = strStr("aaaaa", "bba");
 //        System.out.print("位置：" + a);
-        ListNode listNode = new ListNode(1);
+        ListNode1 listNode = new ListNode1(1);
         listNode.val = 1;
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(4);
+        listNode.next = new ListNode1(2);
+        listNode.next.next = new ListNode1(4);
         mergeTwoLists(listNode,listNode);
     }
 
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode listNode = l1;
+    public static ListNode1 mergeTwoLists(ListNode1 l1, ListNode1 l2) {
+        ListNode1 listNode = l1;
         while (l1.next != null) {
             System.out.print("链表：" + l1.val);
         }

@@ -28,6 +28,7 @@
     <color name="color_b">#FFAB00</color>
     <color name="color_c">#00AD70</color>
 
+    <color name="color_blue">#2A99FF</color>
     <color name="hard_color">#48495f</color>
     <color name="bg_apl_color">#FFFFFF</color>
 </resources>

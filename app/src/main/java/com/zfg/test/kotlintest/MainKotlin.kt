@@ -22,6 +22,7 @@ import com.zfg.test.activity.anim.ValueAnimActivity
 import com.zfg.test.activity.anim.ZhenAnimActivity
 import com.zfg.test.activity.chart.*
 import com.zfg.test.activity.data.GreenDaoTestActivity
+import com.zfg.test.activity.ehks.OrderActivity
 import com.zfg.test.activity.image.GifActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
 import com.zfg.test.activity.rxjava.Rxjava2TestActivity
@@ -56,7 +57,7 @@ class MainKotlin : AppCompatActivity() {
             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava", "Rxjava2"
             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
             , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
-            "spannableString", "gif", "socket", "aidl通信"
+            "spannableString", "gif", "socket", "aidl通信", "横向", "订单", "edit", "选择照片"
     )
 
     internal var activityList: ArrayList<Class<*>> = java.util.ArrayList()
@@ -173,6 +174,10 @@ class MainKotlin : AppCompatActivity() {
         activityList.add(GifActivity::class.java)
         activityList.add(SocketTestActivity::class.java)
         activityList.add(AIDLTestActivity::class.java)
+        activityList.add(TimeLineRvActivity::class.java)
+        activityList.add(OrderActivity::class.java)
+        activityList.add(MyEditTextActivity::class.java)
+        activityList.add(SelectImageActivity::class.java)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -1,6 +1,12 @@
 package com.zfg.test.activity.rxjava;
 
 import android.annotation.SuppressLint;
+import android.app.IntentService;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,6 +34,12 @@ public class RxjavaTestActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
+        IntentService intentService = new IntentService("aa") {
+            @Override
+            protected void onHandleIntent(@Nullable Intent intent) {
+
+            }
+        };
         return R.layout.activity_rxjava_test;
     }
 

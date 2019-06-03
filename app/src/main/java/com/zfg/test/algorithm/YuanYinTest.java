@@ -22,7 +22,7 @@ public class YuanYinTest {
             countStr(strings.get(i), 'i');
             countStr(strings.get(i), 'o');
             countStr(strings.get(i), 'u');
-            if(i!=strings.size()-1){
+            if (i != strings.size() - 1) {
                 System.out.println();
             }
         }

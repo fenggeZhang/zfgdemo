@@ -2,6 +2,8 @@ package com.zfg.test.activity.rxjava;
 
 import android.annotation.SuppressLint;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,7 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -24,7 +27,73 @@ public class RxjavaSchedulerTest {
 //        observableJust();
 //        observableCreate1();
 //        observableMap();
-        observableFilterMap();
+//        observableFilterMap();
+
+//        条件操作符 布尔操作符
+//        observableAll();
+//        observableContains();
+        observableTackUntil();
+    }
+
+    /**
+     * 当第二个得Observable发射了一项数据或者终止时，丢弃原始Observable发射得任何数据
+     * <p>
+     * 结果：
+     * 1
+     * 2
+     * 3
+     * 4
+     * 5
+     */
+    private static void observableTackUntil() {
+        Observable.just(1, 2, 3, 4, 5, 6, 7, 8, 9).takeUntil(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) throws Exception {
+                return integer == 5;
+            }
+        }).subscribe(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) throws Exception {
+                System.out.println(integer);
+            }
+        });
+    }
+
+    /**
+     * 判定一个Observable是否发射了一个特定得值
+     */
+    private static void observableContains() {
+        Observable.just(2, 30, 22, 5, 60, 1).contains(22).subscribe(new Consumer<Boolean>() {
+            @Override
+            public void accept(Boolean aBoolean) throws Exception {
+                System.out.println("结果：" + aBoolean);
+            }
+        });
+        Observable.just(2, 30, 22, 5, 60, 1).isEmpty().subscribe(new Consumer<Boolean>() {
+            @Override
+            public void accept(Boolean aBoolean) throws Exception {
+                System.out.println("结果：" + aBoolean);
+            }
+        });
+    }
+
+    /**
+     * 判断Observable发射得数据是否都满足某个条件
+     * <p>
+     * 数据是否都满足小于10  返回false
+     */
+    private static void observableAll() {
+        Observable.just(1, 2, 3, 4, 5, 6, 10).all(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) throws Exception {
+                return integer < 10;
+            }
+        }).subscribe(new Consumer<Boolean>() {
+            @Override
+            public void accept(Boolean aBoolean) throws Exception {
+                System.out.println("结果：" + aBoolean);
+            }
+        });
     }
 
     /**

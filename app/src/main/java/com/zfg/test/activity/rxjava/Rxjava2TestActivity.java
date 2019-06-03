@@ -1,8 +1,11 @@
 package com.zfg.test.activity.rxjava;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
+import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zhouyou.http.EasyHttp;
@@ -27,6 +30,7 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
@@ -54,10 +58,93 @@ public class Rxjava2TestActivity extends BaseActivity {
 //        flowableTest();
 
 //        do 操作符
-        doTest();
+//        doTest();
         System.out.println("---------------------------");
 //        completable 结合 andthen操作符
-        andThen();
+//        andThen();
+
+        schedulerstest();
+
+//        源码分析
+        mapYuanMa();
+    }
+
+    /**
+     * map源码
+     */
+    private void mapYuanMa() {
+
+    }
+
+    /**
+     * 05-21 17:17:21.166 4893-11956/com.zfg.test D/wyz: doOnSubscribe2:RxCachedThreadScheduler-5
+     * 05-21 17:17:21.166 4893-4893/com.zfg.test D/wyz: doOnSubscribe1:main
+     * 05-21 17:17:21.166 4893-11956/com.zfg.test D/wyz: create:RxCachedThreadScheduler-5
+     * 05-21 17:17:21.166 4893-11956/com.zfg.test D/wyz: map1:RxCachedThreadScheduler-5
+     * 05-21 17:17:21.176 4893-11957/com.zfg.test D/wyz: flatMap:RxCachedThreadScheduler-6
+     * 05-21 17:17:21.196 4893-4893/com.zfg.test D/wyz: 执行完毕:main
+     */
+    private void schedulerstest() {
+        Observable
+                .create(new ObservableOnSubscribe<Integer>() {
+                    @Override
+                    public void subscribe(ObservableEmitter<Integer> e) throws Exception {
+                        Log.d("wyz", "create:" + Thread.currentThread().getName());
+                        e.onNext(1);
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .map(new Function<Integer, Integer>() {
+                    @Override
+                    public Integer apply(Integer integer) throws Exception {
+                        Log.d("wyz", "map1:" + Thread.currentThread().getName());
+                        return integer;
+                    }
+                })
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        Log.d("wyz", "doOnSubscribe1:" + Thread.currentThread().getName());
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        Log.d("wyz", "doOnSubscribe2:" + Thread.currentThread().getName());
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.io())
+                .flatMap(new Function<Integer, ObservableSource<Integer>>() {
+                    @Override
+                    public ObservableSource<Integer> apply(Integer integer) throws Exception {
+                        Log.d("wyz", "flatMap:" + Thread.currentThread().getName());
+                        return Observable.fromArray(integer);
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Integer>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(Integer value) {
+                        Log.d("wyz", "执行完毕:" + Thread.currentThread().getName());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
     }
 
     @SuppressLint("CheckResult")

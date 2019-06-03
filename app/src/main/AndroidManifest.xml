@@ -226,6 +226,14 @@
         </activity>
         <activity android:name=".activity.rxjava.Rxjava2TestActivity">
         </activity>
+        <activity android:name=".activity.TimeLineRvActivity">
+        </activity>
+        <activity android:name=".activity.ehks.OrderActivity">
+        </activity>
+        <activity android:name=".activity.MyEditTextActivity">
+        </activity>
+        <activity android:name=".activity.SelectImageActivity">
+        </activity>
     </application>
 
 </manifest>

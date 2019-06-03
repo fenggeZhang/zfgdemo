@@ -1,6 +1,7 @@
 package com.zfg.test.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -24,6 +26,8 @@ import com.zfg.test.activity.permission.PermissionsResultListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.functions.Consumer;
 
 /**
  * 权限申请
@@ -46,6 +50,7 @@ public class PermissionTestActivity extends BaseActivity implements View.OnClick
         mTextView = findViewById(R.id.call_tv);
     }
 
+    @SuppressLint("CheckResult")
     @Override
     protected void initData() {
         AndPermission.with(this)
@@ -64,6 +69,13 @@ public class PermissionTestActivity extends BaseActivity implements View.OnClick
                         showToast("拒绝");
                     }
                 }).start();
+        new RxPermissions(this).request(Manifest.permission.ACCESS_FINE_LOCATION)
+                .subscribe(new Consumer<Boolean>() {
+                    @Override
+                    public void accept(Boolean aBoolean) throws Exception {
+//                                accessFineOk();
+                    }
+                });
     }
 
     @Override
