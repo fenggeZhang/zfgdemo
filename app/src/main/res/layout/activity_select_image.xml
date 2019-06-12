@@ -8,10 +8,7 @@
     tools:context=".activity.SelectImageActivity">
 
     <include layout="@layout/common_titlebar_layout"/>
-    <android.support.design.widget.TextInputEditText
-        android:hint="名字"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/content_rv"
         android:layout_width="match_parent"

@@ -16,6 +16,7 @@ import com.zfg.test.utils.LogUtil;
 
 import org.reactivestreams.Subscription;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import io.reactivex.BackpressureStrategy;
@@ -50,6 +51,7 @@ public class RxjavaTestActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+     String[] strings= getResources().getStringArray(R.array.main_title_list);
 //        test1();
 //        test2();
 //        test3();

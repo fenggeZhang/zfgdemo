@@ -11,5 +11,12 @@
 
     <com.zfg.test.weigt.EditLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:background="@color/item_type_1"/>
+
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击"/>
 </LinearLayout>
