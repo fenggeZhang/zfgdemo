@@ -32,6 +32,7 @@ public class AddCustomerStoreImageAdapter extends BaseQuickAdapter<CustomerStore
             helper.setGone(R.id.delete_iv, true);
             ImageView imageView = helper.getView(R.id.content_iv);
             Glide.with(mContext).load(item.getLocalPath()).into(imageView);
+//            Glide.with(mContext).load("https://static.dingtalk.com/media/lADPDgQ9qUNNA2PNBLnNBNc_1239_1209.jpg").into(imageView);
         }
         helper.addOnClickListener(R.id.delete_iv);
     }
