@@ -49,17 +49,17 @@ class MainKotlin : AppCompatActivity() {
 
 //    var titleList: Array<String> = resources.getStringArray(R.array.main_title_list)
 
-   /* var list: ArrayList<String> = arrayListOf("网页", "排序", "分隔符", "搜索",
-            "注解", "注解2", "event数据", "event数据1", "动画", "视觉图", "测量高度"
-            , "三级分类", "头部Visible", "图形验证码", "签名", "请求", "换肤"
-            , "新控件", "引导层", "多种状态", "侧滑首页", "适配", "横屏-竖屏"
-            , "悬浮按钮", "分组+多分类", "二级分类", "拖拽分组", "伸缩text", "雷达扫描动画"
-            , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
-            , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
-            , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava", "Rxjava2"
-            , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
-            , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
-            "spannableString", "gif", "socket", "aidl通信", "横向", "订单", "edit", "选择照片")*/
+    /* var list: ArrayList<String> = arrayListOf("网页", "排序", "分隔符", "搜索",
+             "注解", "注解2", "event数据", "event数据1", "动画", "视觉图", "测量高度"
+             , "三级分类", "头部Visible", "图形验证码", "签名", "请求", "换肤"
+             , "新控件", "引导层", "多种状态", "侧滑首页", "适配", "横屏-竖屏"
+             , "悬浮按钮", "分组+多分类", "二级分类", "拖拽分组", "伸缩text", "雷达扫描动画"
+             , "自定义view", "expand分组", "加载大图", "组件化测试", "弧布局", "点赞"
+             , "网络请求", "权限", "手势", "视频播放器", "视频列表", "折线图表", "条形图"
+             , "折线图1", "多折线图", "饼状图", "滚动文字", "加载刷新", "数据", "Rxjava", "Rxjava2"
+             , "多条形图", "弹出框", "时间选择器", "生成二维码", "ck主页", "权限申请"
+             , "帧动画", "补间动画", "属性动画", "measure", "分发", "联系人", "汽车分类",
+             "spannableString", "gif", "socket", "aidl通信", "横向", "订单", "edit", "选择照片")*/
 
     internal var listData: ArrayList<MainEntity> = java.util.ArrayList();
 
@@ -181,6 +181,7 @@ class MainKotlin : AppCompatActivity() {
         additem("订单", OrderActivity::class.java)
         additem("edit", MyEditTextActivity::class.java)
         additem("九宫格多选照片", SelectImageActivity::class.java)
+        additem("地图", MapSearchActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {

@@ -14,17 +14,23 @@ import com.zfg.test.R;
  * Created by zfg on 2019/5/22
  */
 public class EditLayout extends LinearLayout {
+    EditText mEditText;
+
     public EditLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.my_edit_layout, this);
-        EditText editText = findViewById(R.id.content_et);
+        mEditText = findViewById(R.id.content_et);
         ImageView imageView = findViewById(R.id.delete_iv);
 
         imageView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                editText.setText(null);
+                mEditText.setText(null);
             }
         });
+    }
+
+    public String getContent() {
+        return mEditText.getText().toString().trim();
     }
 }
