@@ -9,6 +9,7 @@ import com.billy.cc.core.component.CC;
 import com.didi.virtualapk.PluginManager;
 import com.facebook.stetho.Stetho;
 import com.squareup.leakcanary.LeakCanary;
+import com.yanzhenjie.nohttp.NoHttp;
 import com.zfg.test.utils.LogUtil;
 import com.zfg.test.utils.Logger;
 import com.zhouyou.http.EasyHttp;
@@ -41,6 +42,7 @@ public class MyApplication extends MultiDexApplication {
         initRxEasy();
         initLeakCanary();
         initStetho();
+        NoHttp.initialize(this);
     }
 
     /**

@@ -257,6 +257,8 @@
 
         <activity android:name=".activity.MapSearchActivity">
         </activity>
+        <activity android:name=".activity.UploadImageActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,11 @@
     android:orientation="vertical"
     tools:context=".activity.MapSearchActivity">
 
-    <include layout="@layout/common_titlebar_layout"/>
+    <!--<include layout="@layout/common_titlebar_layout"/>-->
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <com.zfg.test.weigt.EditLayout
         android:id="@+id/my_edit_layout"
@@ -17,11 +21,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/my_edit_layout"
         android:onClick="goSearch"
         android:text="搜索"/>
 
-    <com.amap.api.maps.MapView
-        android:id="@+id/mapview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+
+</RelativeLayout>
