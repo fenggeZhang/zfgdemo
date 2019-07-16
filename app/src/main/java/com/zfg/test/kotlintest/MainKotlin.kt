@@ -183,6 +183,7 @@ class MainKotlin : AppCompatActivity() {
         additem("九宫格多选照片", SelectImageActivity::class.java)
         additem("地图", MapSearchActivity::class.java)
         additem("上传图片", UploadImageActivity::class.java)
+        additem("标签tag", TagViewActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {
