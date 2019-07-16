@@ -106,4 +106,19 @@
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">#FFCCCCCC</item>
     </style>
+
+    <!-- FlexBox -->
+    <declare-styleable name="TagFlowLayout">
+        <attr name="tfl_showHighlight" format="boolean" />
+        <attr name="tfl_defaultDrawable" format="reference" />
+        <attr name="tfl_selectDrawable" format="reference" />
+        <attr name="tfl_defaultTextColor" format="color|reference"/>
+        <attr name="tfl_selectTextColor" format="color|reference" />
+        <attr name="tfl_mode">
+            <enum name="MULTI" value="0" />
+            <enum name="SINGLE" value="1"/>
+            <enum name="SHOW" value="2"/>
+        </attr>
+        <attr name="tfl_maxSelectionCount" format="integer"/>
+    </declare-styleable>
 </resources>

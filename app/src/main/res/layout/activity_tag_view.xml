@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,26 +10,76 @@
 
     <include layout="@layout/common_titlebar_layout"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/tag_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="show"
         android:text="展示"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <com.zfg.test.weigt.TagFlowLayout
+        android:id="@+id/flow_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="single"
-        android:text="单选"/>
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:dividerDrawable="@drawable/bg_flow_divider"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:showDivider="beginning|middle|end"
+        app:tfl_defaultDrawable="@drawable/bg_flow_unselect"
+        app:tfl_defaultTextColor="@color/gray_33"
+        app:tfl_mode="SHOW"
+        app:tfl_selectDrawable="@drawable/bg_flow_selected"
+        app:tfl_selectTextColor="@android:color/white"/>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="mult"
+        android:text="单选"/>
+
+    <com.zfg.test.weigt.TagFlowLayout
+        android:id="@+id/single_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:dividerDrawable="@drawable/bg_flow_divider"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:showDivider="beginning|middle|end"
+        app:tfl_defaultDrawable="@drawable/bg_flow_unselect"
+        app:tfl_defaultTextColor="@color/gray_33"
+        app:tfl_mode="SINGLE"
+        app:tfl_selectDrawable="@drawable/bg_flow_selected"
+        app:tfl_selectTextColor="@android:color/white"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="多选"/>
+
+    <com.zfg.test.weigt.TagFlowLayout
+        android:id="@+id/mult_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:dividerDrawable="@drawable/bg_flow_divider"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:showDivider="beginning|middle|end"
+        app:tfl_defaultDrawable="@drawable/bg_flow_unselect"
+        app:tfl_defaultTextColor="@color/gray_33"
+        app:tfl_mode="MULTI"
+        app:tfl_selectDrawable="@drawable/bg_flow_selected"
+        app:tfl_selectTextColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/count_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已经选择"/>
 </LinearLayout>
