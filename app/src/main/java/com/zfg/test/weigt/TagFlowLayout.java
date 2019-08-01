@@ -24,7 +24,7 @@ public class TagFlowLayout extends FlexboxLayout {
     /*默认和已选的文字颜色*/
     private int itemDefaultTextColor;
     private int itemSelectTextColor;
-    /*操作模式 0 - 多选 | 1 - 单选*/
+    /*操作模式 0 - 多选 | 1 - 单选 | 2 - 纯展示*/
     private int mode = MODE_MULTI_SELECT;
     /*可选标签的最大数量*/
     private int maxSelection;

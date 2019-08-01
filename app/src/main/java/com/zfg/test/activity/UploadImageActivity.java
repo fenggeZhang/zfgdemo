@@ -33,11 +33,11 @@ public class UploadImageActivity extends AppCompatActivity {
     }
 
     public void upload(View view) {
-        String url = "http://cloud.ppaa66.com/Interface/api/Upload/EquipmentUploadImage?token=a717268e2e4c4240ac04646632ef77facim4kyl3";
+//        String url = "http://cloud.ppaa66.com/Interface/api/Upload/EquipmentUploadImage?token=a717268e2e4c4240ac04646632ef77facim4kyl3";
         File file = new File("/storage/emulated/0/PictureSelector/CameraImage/PictureSelector_20190524_144943.png");
         FileBinary binary1 = new FileBinary(file);
         binary1.setUploadListener(0, mOnUploadListener); // 设置一个上传监听器。
-        Request<String> request = new StringRequest(url, RequestMethod.POST);
+        Request<String> request = new StringRequest("", RequestMethod.POST);
         request.add("Photo", binary1);
         queue.add(0, request, new OnResponseListener<String>() {
             @Override

@@ -31,6 +31,7 @@ import com.zfg.test.activity.star.ShineButtonActivity
 import com.zfg.test.activity.ui.ViewStubActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.binder.AIDLTestActivity
+import com.zfg.test.designstyle.factory.FactoryActivity
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
 import com.zfg.test.utils.ToastUtils
@@ -184,6 +185,8 @@ class MainKotlin : AppCompatActivity() {
         additem("地图", MapSearchActivity::class.java)
         additem("上传图片", UploadImageActivity::class.java)
         additem("标签tag", TagViewActivity::class.java)
+        additem("工厂模式", FactoryActivity::class.java)
+        additem("侧滑控件",SwipePanelActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {

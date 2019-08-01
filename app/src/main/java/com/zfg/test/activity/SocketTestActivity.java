@@ -117,7 +117,7 @@ public class SocketTestActivity extends Activity implements Runnable {
     }
 
     //接收线程发送过来信息，并用TextView显示
-    public Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             mContentTv.setText(mContentTv.getText().toString() + content);

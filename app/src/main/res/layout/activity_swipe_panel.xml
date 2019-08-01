@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zfg.test.weigt.SwipePanel
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipePanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:bottomDrawable="@drawable/icon_audio"
+    app:bottomEdgeSize="100dp"
+    app:bottomSwipeColor="@color/color_c"
+    app:isBottomCenter="true"
+    app:leftDrawable="@drawable/img_back"
+    app:leftEdgeSize="100dp"
+    app:leftSwipeColor="@color/colorPrimary"
+    tools:context=".activity.SwipePanelActivity">
+
+</com.zfg.test.weigt.SwipePanel>
+    <!--
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.SwipePanelActivity">
+
+    </android.support.constraint.ConstraintLayout>-->
