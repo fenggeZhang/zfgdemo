@@ -5,17 +5,17 @@ aidl跨进程通信练习
 [代码规范](https://github.com/Blankj/AndroidStandardDevelop#10-%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83)
 
 - [additem("网页", BaseWebViewActivity::class.java);](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/BaseWebViewActivity.java)
--         additem("分隔符", LinearLayoutActivity::class.java);
--         additem("搜索", SearchActivity::class.java);
--         additem("注解", Dagger2TestActivity::class.java)
--         additem("注解2", Dagger2Test1Activity::class.java)
--         additem("event数据", AActivity::class.java)
--         additem("event数据1", BActivity::class.java)
--         additem("动画", AnimActivity::class.java)
--         additem("视觉图", RetrofitTestActivity::class.java)
--         additem("测量高度", FragmentsKotlin::class.java)
--         additem("三级分类", MultClassicActivity::class.java)
--         additem("头部Visible", TitleBarActivity::class.java)
+- [additem("分隔符", LinearLayoutActivity::class.java);](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/LinearLayoutActivity.java)
+- additem("搜索", SearchActivity::class.java);
+- additem("注解", Dagger2TestActivity::class.java)
+- additem("注解2", Dagger2Test1Activity::class.java)
+- additem("event数据", AActivity::class.java)
+- additem("event数据1", BActivity::class.java)
+- additem("动画", AnimActivity::class.java)
+- additem("视觉图", RetrofitTestActivity::class.java)
+- additem("测量高度", FragmentsKotlin::class.java)
+- additem("三级分类", MultClassicActivity::class.java)
+- additem("头部Visible", TitleBarActivity::class.java)
 -         additem("图形验证码", AdjustCodeActivity::class.java)
 -         additem("签名", DrawTextActivity::class.java)
 -         additem("请求", RequestActivity::class.java)
