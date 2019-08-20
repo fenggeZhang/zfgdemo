@@ -265,6 +265,8 @@
         </activity>
         <activity android:name=".activity.SwipePanelActivity">
         </activity>
+        <activity android:name=".activity.SortListActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.zfg.test.kotlintest
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
@@ -34,6 +35,7 @@ import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.designstyle.factory.FactoryActivity
 import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
+import com.zfg.test.utils.LogUtil
 import com.zfg.test.utils.ToastUtils
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
@@ -76,6 +78,7 @@ class MainKotlin : AppCompatActivity() {
         initData()
         initView()
         addListener()
+        LogUtil.e("onCreate")
     }
 
     private fun addListener() {
@@ -186,12 +189,33 @@ class MainKotlin : AppCompatActivity() {
         additem("上传图片", UploadImageActivity::class.java)
         additem("标签tag", TagViewActivity::class.java)
         additem("工厂模式", FactoryActivity::class.java)
-        additem("侧滑控件",SwipePanelActivity::class.java)
+        additem("侧滑控件", SwipePanelActivity::class.java)
+        additem("List排序", SortListActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {
         listData.add(MainEntity(title, java))
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        LogUtil.e("onSaveInstanceState")
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        LogUtil.e("onRestoreInstanceState")
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration?) {
+        super.onConfigurationChanged(newConfig)
+        LogUtil.e("onConfigurationChanged")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        LogUtil.e("onDestroy")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
