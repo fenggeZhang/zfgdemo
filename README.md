@@ -29,9 +29,9 @@ aidl跨进程通信练习
 - [additem("悬浮按钮", FloatingActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/FloatingActivity.java)
 - [additem("分组+多分类", ExpandableRecyclerActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/ExpandableRecyclerActivity.java)
 - [additem("二级分类", ExpandableClassicRecyclerActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/ExpandableClassicRecyclerActivity.java)
-- [additem("拖拽分组", DragGoupActivity::class.java)]
-- [additem("伸缩text", ExpandableTextViewActivity::class.java)]
-- [additem("雷达扫描动画", RadarScanActivity::class.java)]
+- [additem("拖拽分组", DragGoupActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/DragGoupActivity.java)
+- [additem("伸缩text", ExpandableTextViewActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/ExpandableTextViewActivity.java)
+- [additem("雷达扫描动画", RadarScanActivity::class.java)](https://github.com/fenggeZhang/zfgdemo/blob/master/app/src/main/java/com/zfg/test/activity/RadarScanActivity.java)
 - [additem("自定义view", TestViewActivity::class.java)]
 - [additem("expand分组", ExpandListActivity::class.java)]
 - [additem("加载大图", LongPhotoActivity::class.java)]
