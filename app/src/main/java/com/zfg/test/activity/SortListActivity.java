@@ -4,6 +4,7 @@ import com.zfg.test.R;
 import com.zfg.test.activity.base.BaseActivity;
 import com.zfg.test.utils.LogUtil;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -24,6 +25,16 @@ public class SortListActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+
+        double v = Double.valueOf("146.14");
+        double a = v * 100.0f;
+
+        double v1 = Double.valueOf("146.1");
+        double a1 = v1 * 100;
+        BigDecimal bigDecimal = new BigDecimal("146.14");
+        BigDecimal bigDecimal1 = new BigDecimal("100");
+        BigDecimal c = bigDecimal.multiply(bigDecimal1);
+
         List<String> strings = new ArrayList<>();
       /*  strings.add("=#");
         strings.add("#");
