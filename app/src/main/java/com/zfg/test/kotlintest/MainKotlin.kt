@@ -18,6 +18,7 @@ import com.ethanhua.skeleton.Skeleton
 import com.ethanhua.skeleton.SkeletonScreen
 import com.zfg.test.R
 import com.zfg.test.activity.*
+import com.zfg.test.activity.anim.Anim3DActivity
 import com.zfg.test.activity.anim.BujianAnimActivity
 import com.zfg.test.activity.anim.ValueAnimActivity
 import com.zfg.test.activity.anim.ZhenAnimActivity
@@ -26,6 +27,7 @@ import com.zfg.test.activity.data.GreenDaoTestActivity
 import com.zfg.test.activity.ehks.OrderActivity
 import com.zfg.test.activity.image.GifActivity
 import com.zfg.test.activity.loaddata.LoadMoreDataActivity
+import com.zfg.test.activity.recyclerview.SpanRecyclerActivity
 import com.zfg.test.activity.rxjava.Rxjava2TestActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
@@ -173,6 +175,7 @@ class MainKotlin : AppCompatActivity() {
         additem("帧动画", ZhenAnimActivity::class.java)
         additem("补间动画", BujianAnimActivity::class.java)
         additem("属性动画", ValueAnimActivity::class.java)
+        additem("3D动画", Anim3DActivity::class.java)
         additem("measure", MeasureUiActivity::class.java)
         additem("分发", ViewDispatchEventActivity::class.java)
         additem("联系人", ContactListActivity::class.java)
@@ -191,6 +194,8 @@ class MainKotlin : AppCompatActivity() {
         additem("工厂模式", FactoryActivity::class.java)
         additem("侧滑控件", SwipePanelActivity::class.java)
         additem("List排序", SortListActivity::class.java)
+        additem("联动", Recycler2Activity::class.java)
+        additem("多列rv", SpanRecyclerActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {

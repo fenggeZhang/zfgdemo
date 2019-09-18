@@ -267,6 +267,14 @@
         </activity>
         <activity android:name=".activity.SortListActivity">
         </activity>
+        <activity android:name=".activity.anim.Anim3DActivity">
+        </activity>
+        <activity
+            android:name=".activity.Recycler2Activity"
+            android:hardwareAccelerated="true">
+        </activity>
+        <activity android:name=".activity.recyclerview.SpanRecyclerActivity">
+        </activity>
     </application>
 
 </manifest>
