@@ -4,6 +4,9 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+/**
+ * 分割线 上下左右都设置space宽
+ */
 public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
     private int space;
