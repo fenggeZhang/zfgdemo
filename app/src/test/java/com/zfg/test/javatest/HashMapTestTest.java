@@ -45,12 +45,12 @@ public class HashMapTestTest {
     @Test
     public void eachMap() {
 
-        testTime(10000);  //2 1 2 2
-        testTime(100000);//5 4 5 4
-        testTime(1000000);//18 18 21 17
-        testTime(2000000);//36 39 51 40
-        testTime(10000000);// 195 193 260 184
-        //总结 1 2 相当 然后第四种
+        testTime(10000);  //2 1 2 2  2
+        testTime(100000);//5 4 5 4   17
+        testTime(1000000);//18 18 21 17  81
+        testTime(2000000);//36 39 51 40   192
+        testTime(10000000);// 195 193 260 184  5846
+        //总结 1 2 相当 然后第四种  最后一种最耗时
 
     }
 
@@ -95,6 +95,16 @@ public class HashMapTestTest {
         }
         endTime = System.currentTimeMillis(); // 获取结束时间
         System.out.println("方式4:" + (endTime - startTime));
+
+
+        startTime = System.currentTimeMillis(); // 获取开始时间
+        for (int i = 0; i < map.size(); i++) {
+            map.get("测试" + i);
+        }
+        endTime = System.currentTimeMillis(); // 获取结束时间
+        System.out.println("方式5:" + (endTime - startTime));
         System.out.println();
+
+
     }
 }
