@@ -27,8 +27,46 @@
 
 #print('hello,%s,you have $%d.' %('小鸽子',10000))
 
-a = 'ABC'
-b = a
-a = 'XYZ'
-print(b)
-print(a)
+#a = 'ABC'
+#b = a
+#a = 'XYZ'
+#print(b)
+#print(a)
+
+#age=2
+#if age>=18:
+#  print('your age is',age)
+#  print('adult')
+#elif age>16:
+#  print('你是青少年',age)
+#elif age>10:
+#  print('你是少年儿童',age)
+#else:
+#  print('其他',age)
+
+#s=input('birth...')
+#birth=int(s)
+#if birth<2000:
+# print('00前')
+#else:
+# print('00后')
+
+#names=['Michael','Bob','Tracy']
+#for name in names:
+# print(name)
+
+#sum=0
+#for x in range(101):
+#  sum=sum+x
+#print(sum)
+
+sum=0
+n=99
+while n>0:
+    sum+=n
+    n-=2;
+print(sum)
+
+
+
+
