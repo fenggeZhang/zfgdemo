@@ -40,7 +40,6 @@ public class Recycler2Activity extends AppCompatActivity {
         initRecyclerView1();
         initRecyclerView2();
 
-
         mLeftRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -61,16 +60,21 @@ public class Recycler2Activity extends AppCompatActivity {
     }
 
     private void initRecyclerView2() {
-        mRightRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        linearLayoutManager.setInitialPrefetchItemCount(4);
+        mRightRecyclerView.setLayoutManager(linearLayoutManager);
         mLists = new ArrayList<>();
         ArrayList<String> strings = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 60; i++) {
             strings.add("数据" + i);
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             mLists.add(strings);
         }
         RightRvAdapter stringAdapter = new RightRvAdapter(mLists);
+        mRightRecyclerView.setItemViewCacheSize(200);
+//        mRightRecyclerView.setHasFixedSize(true);
+//        mRightRecyclerView.setNestedScrollingEnabled(false);
         mRightRecyclerView.setAdapter(stringAdapter);
     }
 

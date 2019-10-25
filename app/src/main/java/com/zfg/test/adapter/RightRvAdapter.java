@@ -2,6 +2,8 @@ package com.zfg.test.adapter;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -21,32 +23,44 @@ import java.util.List;
  */
 public class RightRvAdapter extends BaseQuickAdapter<List<String>, BaseViewHolder> {
     private Context mContext;
+    RecyclerView.RecycledViewPool viewPool;
 
     public RightRvAdapter(@Nullable List<List<String>> data) {
         super(R.layout.item_right_rv, data);
+        viewPool = new RecyclerView.RecycledViewPool();
     }
 
-    public Context getContext() {
+    @Override
+    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return super.onCreateViewHolder(parent, viewType);
+
+    }
+    /*  public Context getContext() {
         return mContext;
     }
 
     public void setContext(Context context) {
         mContext = context;
-    }
+    }*/
 
     @Override
     protected void convert(BaseViewHolder helper, List<String> item) {
-       /* LinearLayout linearLayout = helper.getView(R.id.content);
+        LinearLayout linearLayout = helper.getView(R.id.content);
         for (int i = 0; i < item.size(); i++) {
-            addview(linearLayout, item.get(i), linearLayout);
-        }*/
+            addview(helper.itemView.getContext(), linearLayout, item.get(i), linearLayout);
+        }
 
     }
 
-    private void addview(LinearLayout linearLayout, String text, ViewGroup view) {
+    private void addview(Context context, LinearLayout linearLayout, String text, ViewGroup view) {
         //每次创建一个view
-        TextView rl_wifi = (TextView) View.inflate(getContext(), R.layout.item_textview, view);
-        rl_wifi.setText(text);
+//        TextView rl_wifi = (TextView) LayoutInflater.from(context).inflate(R.layout.item_textview, view);
+//        rl_wifi.setText(text);
+        TextView textView = new TextView(context);
+        textView.setText(text);
+        textView.setTextSize(16);
+        textView.setTextColor(context.getResources().getColor(R.color.black));
+        textView.setLayoutParams(new LinearLayout.LayoutParams(200, 80));
        /* TextView wifiNameTv = (TextView) rl_wifi.findViewById(R.id.wifiname_tv);
         TextView wifiMac = (TextView) rl_wifi.findViewById(R.id.wifi_mac_tv);
         //删除按钮
@@ -89,7 +103,7 @@ public class RightRvAdapter extends BaseQuickAdapter<List<String>, BaseViewHolde
         });
         //把当前对象保存到集合中
         wificonditions.put(wifiitemId, rl_wifi);*/
-        linearLayout.addView(rl_wifi);
+        linearLayout.addView(textView);
         //每次添加以后，位置会变动
 //        wifiposition++;
         //每调用一次id++，防止重复
