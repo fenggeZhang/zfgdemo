@@ -9,13 +9,9 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
-import android.view.MenuItem
 import android.view.View
-import android.widget.Switch
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen
-import com.ethanhua.skeleton.Skeleton
-import com.ethanhua.skeleton.SkeletonScreen
 import com.zfg.test.R
 import com.zfg.test.activity.*
 import com.zfg.test.activity.anim.Anim3DActivity
@@ -31,17 +27,12 @@ import com.zfg.test.activity.recyclerview.SpanRecyclerActivity
 import com.zfg.test.activity.rxjava.Rxjava2TestActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
-import com.zfg.test.activity.ui.ViewStubActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.designstyle.factory.FactoryActivity
-import com.zfg.test.kotlintest.activity.BaseWebKotlin
 import com.zfg.test.kotlintest.activity.FragmentsKotlin
 import com.zfg.test.utils.LogUtil
 import com.zfg.test.utils.ToastUtils
-import io.reactivex.Observable
-import io.reactivex.schedulers.Schedulers
-import java.util.concurrent.TimeUnit
 
 /**
  * Created by zfg on 2018/6/15
@@ -154,8 +145,9 @@ class MainKotlin : AppCompatActivity() {
         additem("网络请求", RxEasyHttpActivity::class.java)
         additem("权限", PermissionsActivity::class.java)
         additem("手势", GestureActivity::class.java)
-        additem("视频播放器", VideoActivity::class.java)
-        additem("视频列表", VideoListActivity::class.java)
+//        additem("视频播放器", VideoActivity::class.java)
+        additem("视频播放", PlayVideoActivity::class.java)
+//        additem("视频列表", VideoListActivity::class.java)
         additem("折线图表", ChartsActivity::class.java)
         additem("条形图", BarChartsActivity::class.java)
         additem("折线图1", LineChartActivity::class.java)
@@ -191,6 +183,7 @@ class MainKotlin : AppCompatActivity() {
         additem("地图", MapSearchActivity::class.java)
         additem("上传图片", UploadImageActivity::class.java)
         additem("标签tag", TagViewActivity::class.java)
+        additem("流布局", FlexRvActivity::class.java)
         additem("工厂模式", FactoryActivity::class.java)
         additem("侧滑控件", SwipePanelActivity::class.java)
         additem("List排序", SortListActivity::class.java)

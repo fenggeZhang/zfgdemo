@@ -275,6 +275,13 @@
         </activity>
         <activity android:name=".activity.recyclerview.SpanRecyclerActivity">
         </activity>
+        <activity
+            android:name=".activity.PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.FlexRvActivity">
+        </activity>
     </application>
 
 </manifest>

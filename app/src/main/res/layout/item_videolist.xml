@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <chuangyuan.ycj.videolibrary.widget.VideoPlayerView
+    <!--<chuangyuan.ycj.videolibrary.widget.VideoPlayerView
         android:id="@+id/item_exo_play_context_id"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -18,5 +18,5 @@
         app:resize_mode="fit"
         app:show_timeout="3000"
         app:surface_type="texture_view"
-        />
+        />-->
 </LinearLayout>
