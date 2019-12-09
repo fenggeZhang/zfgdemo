@@ -20,7 +20,7 @@ public class TagViewActivity extends BaseActivity {
     StringTagAdapter mStringTagAdapter;
     StringTagAdapter mStringTagAdapter1;
     StringTagAdapter mStringTagAdapter2;
-
+//dividerDrawable 分割线 10dp 透明的
     @Override
     protected int getLayoutId() {
         return R.layout.activity_tag_view;
