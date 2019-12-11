@@ -210,6 +210,7 @@ dependencies {
     implementation files('libs/AMap3DMap_6.9.0_AMapSearch_6.9.0_AMapLocation_4.6.0_20190530.jar')
     implementation 'com.yanzhenjie.nohttp:nohttp:1.1.1'
     implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
 }
 repositories {

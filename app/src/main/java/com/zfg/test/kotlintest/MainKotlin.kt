@@ -27,6 +27,7 @@ import com.zfg.test.activity.recyclerview.SpanRecyclerActivity
 import com.zfg.test.activity.rxjava.Rxjava2TestActivity
 import com.zfg.test.activity.rxjava.RxjavaTestActivity
 import com.zfg.test.activity.star.ShineButtonActivity
+import com.zfg.test.activity.star.UnReadNewsActivity
 import com.zfg.test.adapter.DividerGridItemDecoration
 import com.zfg.test.binder.AIDLTestActivity
 import com.zfg.test.designstyle.factory.FactoryActivity
@@ -189,6 +190,7 @@ class MainKotlin : AppCompatActivity() {
         additem("List排序", SortListActivity::class.java)
         additem("联动", Recycler2Activity::class.java)
         additem("多列rv", SpanRecyclerActivity::class.java)
+        additem("未读消息数", UnReadNewsActivity::class.java)
     }
 
     private fun additem(title: String, java: Class<*>) {

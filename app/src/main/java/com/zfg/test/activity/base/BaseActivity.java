@@ -21,6 +21,7 @@ import com.zfg.test.weigt.ILoadingDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.ButterKnife;
 import io.reactivex.disposables.Disposable;
 
 /**

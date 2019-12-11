@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 可选项 default, shortEdges, never -->
+        <!--默认是 竖屏延伸 横屏不延伸(刘海整个区域是黑色)-->
+        <!--shortEdges 是横屏和竖屏都延伸到刘海区域 （横屏 刘海区域是页面背景）-->
+        <!--never 是横屏和竖屏都不延伸到刘海-->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
