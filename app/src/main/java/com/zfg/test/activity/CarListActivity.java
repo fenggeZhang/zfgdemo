@@ -19,7 +19,6 @@ import java.util.List;
 
 public class CarListActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
-    private CarListAdapter mCarListAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -58,8 +57,8 @@ public class CarListActivity extends BaseActivity {
         }
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        mCarListAdapter = new CarListAdapter(res);
-        mRecyclerView.setAdapter(mCarListAdapter);
+        CarListAdapter carListAdapter = new CarListAdapter(res);
+        mRecyclerView.setAdapter(carListAdapter);
     }
 
     @Override

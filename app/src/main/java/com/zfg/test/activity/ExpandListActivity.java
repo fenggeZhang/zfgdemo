@@ -18,8 +18,6 @@ import java.util.List;
 public class ExpandListActivity extends BaseActivity {
 
     private ExpandableListView mExpandableListView;
-    private MyExpandAdapter mMyExpandAdapter;
-    private List<ExpandGroupBean> mGroupBeanList;
 
     @Override
     protected int getLayoutId() {
@@ -33,7 +31,7 @@ public class ExpandListActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        mGroupBeanList = new ArrayList<>();
+        List<ExpandGroupBean> groupBeanList = new ArrayList<>();
         ArrayList<ExpandGroupBean.ExpandChildBean> expandChildBeans = new ArrayList<>();
         for (int j = 0;j < 5; j++) {
             ExpandGroupBean.ExpandChildBean expandChildBean=new ExpandGroupBean.ExpandChildBean();
@@ -44,10 +42,10 @@ public class ExpandListActivity extends BaseActivity {
             ExpandGroupBean expandGroupBean = new ExpandGroupBean();
             expandGroupBean.setGroupName("分组" + i);
             expandGroupBean.setChildBeans(expandChildBeans);
-            mGroupBeanList.add(expandGroupBean);
+            groupBeanList.add(expandGroupBean);
         }
-        mMyExpandAdapter = new MyExpandAdapter(mGroupBeanList, this);
-        mExpandableListView.setAdapter(mMyExpandAdapter);
+        MyExpandAdapter myExpandAdapter = new MyExpandAdapter(groupBeanList, this);
+        mExpandableListView.setAdapter(myExpandAdapter);
     }
 
     @Override

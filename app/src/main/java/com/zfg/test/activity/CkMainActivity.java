@@ -15,7 +15,6 @@ import java.util.List;
 
 public class CkMainActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
-    private List<CkBean> mCkBeanList;
     private CkAdapter mCkAdapter;
 
     @Override
@@ -30,20 +29,20 @@ public class CkMainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        mCkBeanList = new ArrayList<>();
-        mCkAdapter = new CkAdapter(mCkBeanList);
+        List<CkBean> ckBeanList = new ArrayList<>();
+        mCkAdapter = new CkAdapter(ckBeanList);
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 4));
         mRecyclerView.setAdapter(mCkAdapter);
 
-        mCkBeanList.add(new CkBean("别让你的青春编程更年期！"));
-        mCkBeanList.add(new CkBean("对不起，我的青春撞疼了你"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkBeanList.add(new CkBean("工人安全教育不到位"));
-        mCkAdapter.setNewData(mCkBeanList);
+        ckBeanList.add(new CkBean("别让你的青春编程更年期！"));
+        ckBeanList.add(new CkBean("对不起，我的青春撞疼了你"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        ckBeanList.add(new CkBean("工人安全教育不到位"));
+        mCkAdapter.setNewData(ckBeanList);
     }
 
     @Override

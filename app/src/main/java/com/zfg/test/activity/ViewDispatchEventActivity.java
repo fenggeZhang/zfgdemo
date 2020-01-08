@@ -80,24 +80,21 @@ public class ViewDispatchEventActivity extends BaseActivity implements View.OnCl
         return 0;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        switch (v.getId()) {
-            case R.id.my_tv:
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        LogUtil.e("textView onTouch:MotionEvent.ACTION_DOWN");
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        LogUtil.e("textView onTouch:MotionEvent.ACTION_MOVE");
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        LogUtil.e("textView onTouch:MotionEvent.ACTION_UP");
-                        break;
-                }
-                break;
-            default:
-                break;
+        if (v.getId() == R.id.my_tv) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    LogUtil.e("textView onTouch:MotionEvent.ACTION_DOWN");
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    LogUtil.e("textView onTouch:MotionEvent.ACTION_MOVE");
+                    break;
+                case MotionEvent.ACTION_UP:
+                    LogUtil.e("textView onTouch:MotionEvent.ACTION_UP");
+                    break;
+            }
         }
 // true 将不会往下再传递 也就是onclick
         return false;

@@ -1,5 +1,6 @@
 package com.zfg.test.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.support.v7.widget.DividerItemDecoration;
@@ -34,7 +35,6 @@ public class ContactListActivity extends BaseActivity {
     private LocationBarView mLocationBarView;
     private RecyclerView mRecyclerView;
     private TextView overlay;
-    private ClassicRecyclerAdapter mAdapter;
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
     ;
 
@@ -69,10 +69,10 @@ public class ContactListActivity extends BaseActivity {
         classicBeans.add(new ClassicBean("Q3", TYPE_LEVEL_1));
         classicBeans.add(new ClassicBean("Q5", TYPE_LEVEL_1));
 
-        mAdapter = new ClassicRecyclerAdapter(classicBeans);
+        ClassicRecyclerAdapter adapter = new ClassicRecyclerAdapter(classicBeans);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(adapter);
     }
 
     /**
@@ -107,6 +107,7 @@ public class ContactListActivity extends BaseActivity {
         });
     }
 
+    @SuppressLint("AutoDispose")
     private void test() {
         DisposableObserver<Long> disposableObserver = getObserver();
         Observable.timer(1000, TimeUnit.MILLISECONDS).subscribeOn(Schedulers.io()).subscribe(disposableObserver);

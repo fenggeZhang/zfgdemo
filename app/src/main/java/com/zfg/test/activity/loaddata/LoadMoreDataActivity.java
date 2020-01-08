@@ -85,9 +85,8 @@ public class LoadMoreDataActivity extends BaseActivity {
     private void setData(boolean isRefresh, List data) {
         mNextRequestPage++;
         final int size = data == null ? 0 : data.size();
-        if (isRefresh) {
-            mLoadMoreAdapter.setNewData(data);
-        } else {
+        if (isRefresh) mLoadMoreAdapter.setNewData(data);
+        else {
             if (size > 0) {
                 mLoadMoreAdapter.addData(data);
             }

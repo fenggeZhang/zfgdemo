@@ -59,10 +59,9 @@ public class TitleBarActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_search:
-                ToastUtils.show(this, "搜索");
-                return true;
+        if (item.getItemId() == R.id.action_search) {
+            ToastUtils.show(this, "搜索");
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

@@ -18,7 +18,7 @@ import java.io.IOException;
 
 public class MyPopuWindowActivity extends BaseActivity implements View.OnClickListener {
 
-    private TextView mTextView1, mTextView2, mTextView3, mTextView4;
+    private TextView mTextView1;
     private LinearLayout mLinearLayout;
     MyPopuWindow myPopuWindow;
 
@@ -31,26 +31,20 @@ public class MyPopuWindowActivity extends BaseActivity implements View.OnClickLi
     protected void setupView() {
         mLinearLayout = findViewById(R.id.filter_layout);
         mTextView1 = findViewById(R.id.filter_area_tv);
-        mTextView2 = findViewById(R.id.filter_sales_detail_tv);
-        mTextView3 = findViewById(R.id.filter_sales_money_tv);
-        mTextView4 = findViewById(R.id.filter_setting_tv);
     }
 
     @Override
     protected void initData() {
         View view = getLayoutInflater().inflate(R.layout.popu_filter_setting, null);
         TextView textView = view.findViewById(R.id.confirmTextView);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view1) {
-                // 核心代码start
-                Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
-                Canvas c = new Canvas(bitmap);
-                view.layout(0, 0, view.getLayoutParams().width, view.getLayoutParams().height);
-                view.draw(c);
-                BitmapUtil.saveImageToGallery(mContext, bitmap);
+        textView.setOnClickListener(view1 -> {
+            // 核心代码start
+            Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas c = new Canvas(bitmap);
+            view.layout(0, 0, view.getLayoutParams().width, view.getLayoutParams().height);
+            view.draw(c);
+            BitmapUtil.saveImageToGallery(mContext, bitmap);
 
-            }
         });
         myPopuWindow = new MyPopuWindow(this, view, mLinearLayout);
     }

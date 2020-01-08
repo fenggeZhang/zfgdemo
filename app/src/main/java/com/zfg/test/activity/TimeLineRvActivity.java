@@ -16,8 +16,6 @@ import java.util.List;
 
 public class TimeLineRvActivity extends BaseActivity {
     List<String> strings = new ArrayList<>();
-    private RecyclerView mRecyclerView;
-    private TimeLineAdapter mTimeLineAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -26,16 +24,16 @@ public class TimeLineRvActivity extends BaseActivity {
 
     @Override
     protected void setupView() {
-        mRecyclerView = findViewById(R.id.my_rv);
+        RecyclerView recyclerView = findViewById(R.id.my_rv);
         strings.add("待退款");
         strings.add("车磐收货并退回供应商");
         strings.add("供应商收货");
         strings.add("完成");
-        mTimeLineAdapter = new TimeLineAdapter(strings);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, strings.size()));
+        TimeLineAdapter timeLineAdapter = new TimeLineAdapter(strings);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, strings.size()));
 //        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        mTimeLineAdapter.setSelectState(setSelectState("完成"));
-        mRecyclerView.setAdapter(mTimeLineAdapter);
+        timeLineAdapter.setSelectState(setSelectState("完成"));
+        recyclerView.setAdapter(timeLineAdapter);
 
     }
 

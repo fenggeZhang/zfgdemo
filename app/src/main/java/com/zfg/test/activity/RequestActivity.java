@@ -50,20 +50,17 @@ public class RequestActivity extends BaseActivity {
 
     @Override
     public BaseEntity<?> onTaskInBackground(int taskId, String result) {
-        switch (taskId) {
-            case TASK_MAIN:
-                LogUtil.e("结果啊：："+result);
-                return JsonParserUtil.getApiData(result);
+        if (taskId == TASK_MAIN) {
+            LogUtil.e("结果啊：：" + result);
+            return JsonParserUtil.getApiData(result);
         }
         return super.onTaskInBackground(taskId, result);
     }
 
     @Override
     public void onTaskComplete(int taskId, BaseEntity<?> data) {
-        switch (taskId) {
-            case TASK_MAIN:
-                getMainSuccess(data);
-                break;
+        if (taskId == TASK_MAIN) {
+            getMainSuccess(data);
         }
         super.onTaskComplete(taskId, data);
     }

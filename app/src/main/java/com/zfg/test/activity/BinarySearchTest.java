@@ -10,8 +10,9 @@ public class BinarySearchTest {
     public static void main(String[] args) {
         int[] ints = {10, 55, 8, 100, 2, 6, 74, 25, 88};
         int position = binarySearch(ints, 74);
-        System.out.println("位置：：" + position);
-        System.out.println("数据：" + ints[position]);
+        int position1 = binarySearch(ints, 75);
+        System.out.println("位置：：" + position + "::" + position1);
+        System.out.println("数据：" + ints[position] + "::" + position1);
     }
 
     /**

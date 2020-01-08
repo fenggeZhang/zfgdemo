@@ -50,7 +50,7 @@ public class PermissionTestActivity extends BaseActivity implements View.OnClick
         mTextView = findViewById(R.id.call_tv);
     }
 
-    @SuppressLint("CheckResult")
+    @SuppressLint({"CheckResult", "AutoDispose"})
     @Override
     protected void initData() {
         AndPermission.with(this)
